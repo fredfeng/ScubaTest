@@ -1,0 +1,4245 @@
+Chord run initiated at: Jul 3, 2014 9:46:19 PM
+ENTER: RTA
+Iteration: 0
+Iteration: 1
+LEAVE: RTA
+Time: 00:00:00:214 hh:mm:ss:ms
+*** Class: A
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+	1#1
+	6#2
+	11#3
+	14#4
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:()V@java.lang.Object, (R0)
+2: PUTFIELD_A R0, .f, R1
+3: PUTFIELD_A R0, .g, R2
+4: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: bar:()Ljava/lang/Object;@A
+	1#1
+	4#2
+Control flow graph for bar:()Ljava/lang/Object;@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKEVIRTUAL_A T1, foo:()Ljava/lang/Object;@A, (R0)
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: foo:()Ljava/lang/Object;@A
+	1#1
+	4#2
+Control flow graph for foo:()Ljava/lang/Object;@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: GETFIELD_A T1, R0, .f
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: goo:()Ljava/lang/Object;@A
+	1#1
+	4#2
+Control flow graph for goo:()Ljava/lang/Object;@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKEVIRTUAL_A T1, foo:()Ljava/lang/Object;@A, (R0)
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: goo2:()Ljava/lang/Object;@A
+	1#1
+	4#2
+Control flow graph for goo2:()Ljava/lang/Object;@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: GETFIELD_A T1, R0, .f
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: goo3:()Ljava/lang/Object;@A
+	1#1
+	4#2
+Control flow graph for goo3:()Ljava/lang/Object;@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKEVIRTUAL_A T1, goo2:()Ljava/lang/Object;@A, (R0)
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: main:([Ljava/lang/String;)V@A
+	0#1
+	3#2
+	6#3
+Control flow graph for main:([Ljava/lang/String;)V@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V test1:()V@A, ()
+2: INVOKESTATIC_V test2:()V@A, ()
+3: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: test1:()V@A
+	0#1
+	3#2
+	4#3
+	7#4
+	8#5
+	11#6
+	12#7
+	15#8
+	16#9
+	19#10
+	22#11
+	25#12
+	26#13
+	29#14
+	32#15
+	35#16
+	36#17
+	39#18
+	42#19
+	45#20
+	47#21
+	50#22
+	53#23
+	56#24
+	58#25
+	61#26
+	64#27
+	67#28
+	70#29
+	73#30
+	76#31
+	79#32
+	83#33
+	86#34
+	90#35
+	93#36
+	97#37
+	100#38
+	106#39
+	113#40
+	120#41
+	127#42
+	134#43
+	141#44
+	144#45
+	149#47
+	149#46
+	152#48
+Control flow graph for test1:()V@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: NEW T14, java.lang.Object
+2: MOVE_A T15, T14
+3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T15)
+4: MOVE_A R2, T14
+5: NEW T16, java.lang.Object
+6: MOVE_A T17, T16
+7: INVOKESTATIC_V <init>:()V@java.lang.Object, (T17)
+8: MOVE_A R3, T16
+9: NEW T18, A
+10: MOVE_A T19, T18
+11: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (T19, R2, R3)
+12: MOVE_A R4, T18
+13: NEW T20, B
+14: MOVE_A T21, T20
+15: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (T21, R2, R3)
+16: MOVE_A R5, T20
+17: NEW T22, C
+18: MOVE_A T23, T22
+19: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (T23, R2, R3)
+20: MOVE_A R6, T22
+21: NEW T24, D
+22: MOVE_A T25, T24
+23: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D, (T25, R2, R3)
+24: MOVE_A R7, T24
+25: NEW T26, E
+26: MOVE_A T27, T26
+27: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E, (T27, R2, R3)
+28: MOVE_A R8, T26
+29: INVOKEVIRTUAL_A T28, bar:()Ljava/lang/Object;@A, (R4)
+30: MOVE_A R9, T28
+31: INVOKEVIRTUAL_A T29, bar:()Ljava/lang/Object;@A, (R5)
+32: MOVE_A R10, T29
+33: INVOKEVIRTUAL_A T30, bar:()Ljava/lang/Object;@A, (R6)
+34: MOVE_A R11, T30
+35: INVOKEVIRTUAL_A T31, bar:()Ljava/lang/Object;@A, (R7)
+36: MOVE_A R12, T31
+37: INVOKEVIRTUAL_A T32, bar:()Ljava/lang/Object;@A, (R8)
+38: MOVE_A R13, T32
+39: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R10)
+40: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R11)
+41: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R10, R11)
+42: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R12)
+43: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R13)
+44: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R11, R13)
+45: GETSTATIC_A T33, .out
+47: MOVE_A T34, AConst: "-----TEST1 DONE------"
+46: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T33, T34)
+48: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 35
+Method: test2:()V@A
+	0#1
+	3#2
+	4#3
+	7#4
+	8#5
+	11#6
+	12#7
+	15#8
+	16#9
+	19#10
+	20#11
+	23#12
+	24#13
+	27#14
+	30#15
+	33#16
+	34#17
+	37#18
+	41#19
+	44#20
+	46#21
+	49#22
+	53#23
+	56#24
+	58#25
+	61#26
+	65#27
+	68#28
+	70#29
+	73#30
+	77#31
+	80#32
+	91#33
+	94#34
+Control flow graph for test2:()V@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: NEW T10, java.lang.Object
+2: MOVE_A T11, T10
+3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T11)
+4: MOVE_A R2, T10
+5: NEW T12, java.lang.Object
+6: MOVE_A T13, T12
+7: INVOKESTATIC_V <init>:()V@java.lang.Object, (T13)
+8: MOVE_A R3, T12
+9: NEW T14, java.lang.Object
+10: MOVE_A T15, T14
+11: INVOKESTATIC_V <init>:()V@java.lang.Object, (T15)
+12: MOVE_A R4, T14
+13: NEW T16, A
+14: MOVE_A T17, T16
+15: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (T17, R2, R3)
+16: MOVE_A R5, T16
+17: NEW T18, B
+18: MOVE_A T19, T18
+19: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B, (T19, R2, R3, R4)
+20: MOVE_A R6, T18
+21: NEW T20, C
+22: MOVE_A T21, T20
+23: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C, (T21, R2, R3, R4)
+24: MOVE_A R7, T20
+25: NEW T22, D
+26: MOVE_A T23, T22
+27: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D, (T23, R2, R3, R4)
+28: MOVE_A R8, T22
+29: NEW T24, E
+30: MOVE_A T25, T24
+31: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E, (T25, R2, R3, R4)
+32: MOVE_A R9, T24
+33: INVOKESTATIC_V test2_helper:(LA;LA;LA;LA;LA;)V@A, (R5, R6, R7, R8, R9)
+34: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 26
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+	1#1
+	4#2
+	7#3
+	10#4
+	13#5
+	16#6
+	19#7
+	22#8
+	26#9
+	29#10
+	35#11
+	42#12
+	49#13
+	56#14
+	63#15
+	70#16
+	77#17
+	84#18
+	91#19
+	98#20
+	101#21
+	106#23
+	106#22
+	110#24
+	113#25
+	117#26
+	120#27
+	123#28
+	126#29
+	132#30
+	139#31
+	146#32
+	149#33
+Control flow graph for test2_helper:(LA;LA;LA;LA;LA;)V@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKEVIRTUAL_A T15, goo:()Ljava/lang/Object;@A, (R0)
+2: MOVE_A R6, T15
+3: INVOKEVIRTUAL_A T16, goo:()Ljava/lang/Object;@A, (R1)
+4: MOVE_A R7, T16
+5: INVOKEVIRTUAL_A T17, goo:()Ljava/lang/Object;@A, (R2)
+6: MOVE_A R8, T17
+7: INVOKEVIRTUAL_A T18, goo:()Ljava/lang/Object;@A, (R3)
+8: MOVE_A R9, T18
+9: INVOKEVIRTUAL_A T19, goo:()Ljava/lang/Object;@A, (R4)
+10: MOVE_A R10, T19
+11: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R7)
+12: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R8)
+13: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R9)
+14: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R10)
+15: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R8)
+16: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R9)
+17: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R10)
+18: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R8, R9)
+19: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R8, R10)
+20: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R10)
+21: GETSTATIC_A T20, .out
+23: MOVE_A T11, AConst: "-----TEST2 PART 1 DONE------"
+22: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T20, T11)
+24: INVOKEVIRTUAL_A T21, goo2:()Ljava/lang/Object;@A, (R2)
+25: MOVE_A R12, T21
+26: INVOKEVIRTUAL_A T22, goo2:()Ljava/lang/Object;@A, (R4)
+27: MOVE_A R13, T22
+28: INVOKEVIRTUAL_A T23, goo3:()Ljava/lang/Object;@A, (R2)
+29: MOVE_A R14, T23
+30: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R12)
+31: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R13)
+32: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R14)
+33: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 24
+Method: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+	2#1
+	16#2
+	21#4
+	21#3
+	5#5
+	10#7
+	10#6
+	13#8
+	24#9
+Control flow graph for check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB3, BB4)
+1: IFCMP_A R0, R1, NE, BB4
+
+BB4	(in: BB2, out: BB5)
+2: GETSTATIC_A T6, .out
+4: MOVE_A T7, AConst: "Don't alias"
+3: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T6, T7)
+
+BB3	(in: BB2, out: BB5)
+5: GETSTATIC_A T4, .out
+7: MOVE_A T5, AConst: "Alias"
+6: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T4, T5)
+8: GOTO BB5
+
+BB5	(in: BB3, BB4, out: BB1 (EXIT))
+9: RETURN_V
+
+BB1 (EXIT)	(in: BB5, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 8
+*** Class: B
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+	3#1
+	7#2
+	10#3
+	11#4
+	14#5
+	17#6
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R0, R1, R2)
+2: NEW T3, java.lang.Object
+3: MOVE_A T4, T3
+4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T4)
+5: PUTFIELD_A R0, .b, T3
+6: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 5
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+	3#1
+	8#2
+	11#3
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R0, R1, R2)
+2: PUTFIELD_A R0, .b, R3
+3: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: baz:()Ljava/lang/Object;@B
+	0#1
+	3#2
+	4#3
+	7#4
+Control flow graph for baz:()Ljava/lang/Object;@B:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: NEW T1, java.lang.Object
+2: MOVE_A T2, T1
+3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T2)
+4: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: foo:()Ljava/lang/Object;@B
+	1#1
+	4#2
+	6#3
+	9#4
+Control flow graph for foo:()Ljava/lang/Object;@B:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKEVIRTUAL_A T3, baz:()Ljava/lang/Object;@B, (R0)
+2: MOVE_A R2, T3
+3: GETFIELD_A T4, R0, .b
+4: RETURN_A T4
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 5
+Method: goo:()Ljava/lang/Object;@B
+	1#1
+	4#2
+Control flow graph for goo:()Ljava/lang/Object;@B:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: GETFIELD_A T1, R0, .b
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: goo2:()Ljava/lang/Object;@B
+	1#1
+	4#2
+Control flow graph for goo2:()Ljava/lang/Object;@B:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: GETFIELD_A T1, R0, .b
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+*** Class: C
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+	3#1
+	6#2
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2)
+2: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+	4#1
+	7#2
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2, R3)
+2: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: baz:()Ljava/lang/Object;@C
+	1#1
+	4#2
+Control flow graph for baz:()Ljava/lang/Object;@C:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: GETFIELD_A T1, R0, .b
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: foo:()Ljava/lang/Object;@C
+	1#1
+	4#2
+Control flow graph for foo:()Ljava/lang/Object;@C:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKEVIRTUAL_A T1, baz:()Ljava/lang/Object;@C, (R0)
+2: RETURN_A T1
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: goo:()Ljava/lang/Object;@C
+	2#1
+	2#2
+	5#3
+	9#4
+	12#5
+Control flow graph for goo:()Ljava/lang/Object;@C:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: MOVE_A T3, R0
+2: GETFIELD_A T2, R0, .b
+3: PUTFIELD_A T3, .f, T2
+4: GETFIELD_A T4, R0, .b
+5: RETURN_A T4
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 5
+*** Class: D
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+	3#1
+	7#2
+	10#3
+	11#4
+	14#5
+	17#6
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2)
+2: NEW T3, java.lang.Object
+3: MOVE_A T4, T3
+4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T4)
+5: PUTFIELD_A R0, .d, T3
+6: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 5
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+	3#1
+	8#2
+	11#3
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2)
+2: PUTFIELD_A R0, .d, R3
+3: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+*** Class: E
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E
+	3#1
+	6#2
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (R0, R1, R2)
+2: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+	3#1
+	7#2
+	10#3
+	11#4
+	14#5
+	17#6
+Control flow graph for <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (R0, R1, R2)
+2: NEW T4, java.lang.Object
+3: MOVE_A T5, T4
+4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T5)
+5: PUTFIELD_A R0, .b, T4
+6: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 6
+Method: goo:()Ljava/lang/Object;@E
+	2#1
+	2#2
+	5#3
+	9#4
+	12#5
+Control flow graph for goo:()Ljava/lang/Object;@E:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: MOVE_A T3, R0
+2: GETFIELD_A T2, R0, .f
+3: PUTFIELD_A T3, .b, T2
+4: GETFIELD_A T4, R0, .b
+5: RETURN_A T4
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 5
+*** Class: java.io.Closeable
+Method: close:()V@java.io.Closeable
+*** Class: java.io.FilterOutputStream
+Method: <init>:(Ljava/io/OutputStream;)V@java.io.FilterOutputStream
+	-1#1
+Control flow graph for <init>:(Ljava/io/OutputStream;)V@java.io.FilterOutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: write:(I)V@java.io.FilterOutputStream
+	-1#1
+Control flow graph for write:(I)V@java.io.FilterOutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: write:([B)V@java.io.FilterOutputStream
+	-1#1
+Control flow graph for write:([B)V@java.io.FilterOutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: write:([BII)V@java.io.FilterOutputStream
+	-1#1
+Control flow graph for write:([BII)V@java.io.FilterOutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: flush:()V@java.io.FilterOutputStream
+	-1#1
+Control flow graph for flush:()V@java.io.FilterOutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: close:()V@java.io.FilterOutputStream
+	-1#1
+Control flow graph for close:()V@java.io.FilterOutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+*** Class: java.io.Flushable
+Method: flush:()V@java.io.Flushable
+*** Class: java.io.OutputStream
+Method: <init>:()V@java.io.OutputStream
+	-1#1
+Control flow graph for <init>:()V@java.io.OutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: write:(I)V@java.io.OutputStream
+Method: write:([B)V@java.io.OutputStream
+	-1#1
+Control flow graph for write:([B)V@java.io.OutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: write:([BII)V@java.io.OutputStream
+	-1#1
+Control flow graph for write:([BII)V@java.io.OutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: flush:()V@java.io.OutputStream
+	-1#1
+Control flow graph for flush:()V@java.io.OutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: close:()V@java.io.OutputStream
+	-1#1
+Control flow graph for close:()V@java.io.OutputStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+*** Class: java.io.PrintStream
+Method: <init>:(Ljava/io/OutputStream;)V@java.io.PrintStream
+	-1#1
+Control flow graph for <init>:(Ljava/io/OutputStream;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: <init>:(ZLjava/io/OutputStream;)V@java.io.PrintStream
+	-1#1
+Control flow graph for <init>:(ZLjava/io/OutputStream;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: init:(Ljava/io/OutputStreamWriter;)V@java.io.PrintStream
+	-1#1
+Control flow graph for init:(Ljava/io/OutputStreamWriter;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: <init>:(Ljava/io/OutputStream;Z)V@java.io.PrintStream
+	-1#1
+Control flow graph for <init>:(Ljava/io/OutputStream;Z)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: <init>:(Ljava/io/OutputStream;ZLjava/lang/String;)V@java.io.PrintStream
+	-1#1
+Control flow graph for <init>:(Ljava/io/OutputStream;ZLjava/lang/String;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: <init>:(Ljava/lang/String;)V@java.io.PrintStream
+	-1#1
+Control flow graph for <init>:(Ljava/lang/String;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: <init>:(Ljava/lang/String;Ljava/lang/String;)V@java.io.PrintStream
+	-1#1
+Control flow graph for <init>:(Ljava/lang/String;Ljava/lang/String;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: <init>:(Ljava/io/File;)V@java.io.PrintStream
+	-1#1
+Control flow graph for <init>:(Ljava/io/File;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: <init>:(Ljava/io/File;Ljava/lang/String;)V@java.io.PrintStream
+	-1#1
+Control flow graph for <init>:(Ljava/io/File;Ljava/lang/String;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: ensureOpen:()V@java.io.PrintStream
+	-1#1
+Control flow graph for ensureOpen:()V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: flush:()V@java.io.PrintStream
+	-1#1
+Control flow graph for flush:()V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: close:()V@java.io.PrintStream
+	-1#1
+Control flow graph for close:()V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: checkError:()Z@java.io.PrintStream
+	-1#1
+Control flow graph for checkError:()Z@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: setError:()V@java.io.PrintStream
+	-1#1
+Control flow graph for setError:()V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: clearError:()V@java.io.PrintStream
+	-1#1
+Control flow graph for clearError:()V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: write:(I)V@java.io.PrintStream
+	-1#1
+Control flow graph for write:(I)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: write:([BII)V@java.io.PrintStream
+	-1#1
+Control flow graph for write:([BII)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: write:([C)V@java.io.PrintStream
+	-1#1
+Control flow graph for write:([C)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: write:(Ljava/lang/String;)V@java.io.PrintStream
+	-1#1
+Control flow graph for write:(Ljava/lang/String;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: newLine:()V@java.io.PrintStream
+	-1#1
+Control flow graph for newLine:()V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: print:(Z)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:(Z)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: print:(C)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:(C)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: print:(I)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:(I)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: print:(J)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:(J)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: print:(F)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:(F)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: print:(D)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:(D)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: print:([C)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:([C)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: print:(Ljava/lang/String;)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:(Ljava/lang/String;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: print:(Ljava/lang/Object;)V@java.io.PrintStream
+	-1#1
+Control flow graph for print:(Ljava/lang/Object;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:()V@java.io.PrintStream
+	-1#1
+Control flow graph for println:()V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: println:(Z)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:(Z)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:(C)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:(C)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:(I)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:(I)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:(J)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:(J)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:(F)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:(F)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:(D)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:(D)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:([C)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:([C)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:(Ljava/lang/String;)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:(Ljava/lang/String;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: println:(Ljava/lang/Object;)V@java.io.PrintStream
+	-1#1
+Control flow graph for println:(Ljava/lang/Object;)V@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;@java.io.PrintStream
+	-1#1
+Control flow graph for printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: printf:(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;@java.io.PrintStream
+	-1#1
+Control flow graph for printf:(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;@java.io.PrintStream
+	-1#1
+Control flow graph for format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: format:(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;@java.io.PrintStream
+	-1#1
+Control flow graph for format:(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: append:(Ljava/lang/CharSequence;)Ljava/io/PrintStream;@java.io.PrintStream
+	-1#1
+Control flow graph for append:(Ljava/lang/CharSequence;)Ljava/io/PrintStream;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: append:(Ljava/lang/CharSequence;II)Ljava/io/PrintStream;@java.io.PrintStream
+	-1#1
+Control flow graph for append:(Ljava/lang/CharSequence;II)Ljava/io/PrintStream;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: append:(C)Ljava/io/PrintStream;@java.io.PrintStream
+	-1#1
+Control flow graph for append:(C)Ljava/io/PrintStream;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: append:(C)Ljava/lang/Appendable;@java.io.PrintStream
+	-1#1
+Control flow graph for append:(C)Ljava/lang/Appendable;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: append:(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;@java.io.PrintStream
+	-1#1
+Control flow graph for append:(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 4
+Method: append:(Ljava/lang/CharSequence;)Ljava/lang/Appendable;@java.io.PrintStream
+	-1#1
+Control flow graph for append:(Ljava/lang/CharSequence;)Ljava/lang/Appendable;@java.io.PrintStream:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+*** Class: java.lang.Appendable
+Method: append:(Ljava/lang/CharSequence;)Ljava/lang/Appendable;@java.lang.Appendable
+Method: append:(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;@java.lang.Appendable
+Method: append:(C)Ljava/lang/Appendable;@java.lang.Appendable
+*** Class: java.lang.Object
+Method: <init>:()V@java.lang.Object
+	-1#1
+Control flow graph for <init>:()V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: getClass:()Ljava/lang/Class;@java.lang.Object
+	-1#1
+Control flow graph for getClass:()Ljava/lang/Class;@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: hashCode:()I@java.lang.Object
+	-1#1
+Control flow graph for hashCode:()I@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: equals:(Ljava/lang/Object;)Z@java.lang.Object
+	-1#1
+Control flow graph for equals:(Ljava/lang/Object;)Z@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: clone:()Ljava/lang/Object;@java.lang.Object
+	-1#0
+Control flow graph for clone:()Ljava/lang/Object;@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+0: RETURN_A R0
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: toString:()Ljava/lang/String;@java.lang.Object
+	-1#1
+Control flow graph for toString:()Ljava/lang/String;@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: notify:()V@java.lang.Object
+	-1#1
+Control flow graph for notify:()V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: notifyAll:()V@java.lang.Object
+	-1#1
+Control flow graph for notifyAll:()V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: wait:(J)V@java.lang.Object
+	-1#1
+Control flow graph for wait:(J)V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: wait:(JI)V@java.lang.Object
+	-1#1
+Control flow graph for wait:(JI)V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 3
+Method: wait:()V@java.lang.Object
+	-1#1
+Control flow graph for wait:()V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: finalize:()V@java.lang.Object
+	-1#1
+Control flow graph for finalize:()V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: registerNatives:()V@java.lang.Object
+	-1#1
+Control flow graph for registerNatives:()V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: <clinit>:()V@java.lang.Object
+	-1#1
+Control flow graph for <clinit>:()V@java.lang.Object:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+*** Class: java.lang.System
+Method: <init>:()V@java.lang.System
+	-1#1
+Control flow graph for <init>:()V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: registerNatives:()V@java.lang.System
+	-1#1
+Control flow graph for registerNatives:()V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: setIn:(Ljava/io/InputStream;)V@java.lang.System
+	-1#1
+Control flow graph for setIn:(Ljava/io/InputStream;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: setOut:(Ljava/io/PrintStream;)V@java.lang.System
+	-1#1
+Control flow graph for setOut:(Ljava/io/PrintStream;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: setErr:(Ljava/io/PrintStream;)V@java.lang.System
+	-1#1
+Control flow graph for setErr:(Ljava/io/PrintStream;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: console:()Ljava/io/Console;@java.lang.System
+	-1#1
+Control flow graph for console:()Ljava/io/Console;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: inheritedChannel:()Ljava/nio/channels/Channel;@java.lang.System
+	-1#1
+Control flow graph for inheritedChannel:()Ljava/nio/channels/Channel;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: checkIO:()V@java.lang.System
+	-1#1
+Control flow graph for checkIO:()V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: setIn0:(Ljava/io/InputStream;)V@java.lang.System
+	-1#1
+Control flow graph for setIn0:(Ljava/io/InputStream;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: setOut0:(Ljava/io/PrintStream;)V@java.lang.System
+	-1#1
+Control flow graph for setOut0:(Ljava/io/PrintStream;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: setErr0:(Ljava/io/PrintStream;)V@java.lang.System
+	-1#1
+Control flow graph for setErr0:(Ljava/io/PrintStream;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: setSecurityManager:(Ljava/lang/SecurityManager;)V@java.lang.System
+	-1#1
+Control flow graph for setSecurityManager:(Ljava/lang/SecurityManager;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: setSecurityManager0:(Ljava/lang/SecurityManager;)V@java.lang.System
+	-1#1
+Control flow graph for setSecurityManager0:(Ljava/lang/SecurityManager;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: getSecurityManager:()Ljava/lang/SecurityManager;@java.lang.System
+	-1#1
+Control flow graph for getSecurityManager:()Ljava/lang/SecurityManager;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: currentTimeMillis:()J@java.lang.System
+	-1#1
+Control flow graph for currentTimeMillis:()J@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: nanoTime:()J@java.lang.System
+	-1#1
+Control flow graph for nanoTime:()J@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V@java.lang.System
+	-1#0
+	-1#1
+	-1#2
+	-1#3
+	-1#4
+Control flow graph for arraycopy:(Ljava/lang/Object;ILjava/lang/Object;II)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+0: CHECKCAST T5, R0, java.lang.Object[]
+1: CHECKCAST T6, R2, java.lang.Object[]
+2: ALOAD_A T7, T6, IConst: 0
+3: ASTORE_A T7, T5, IConst: 0
+4: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 8
+Method: identityHashCode:(Ljava/lang/Object;)I@java.lang.System
+	-1#1
+Control flow graph for identityHashCode:(Ljava/lang/Object;)I@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: initProperties:(Ljava/util/Properties;)Ljava/util/Properties;@java.lang.System
+	-1#1
+Control flow graph for initProperties:(Ljava/util/Properties;)Ljava/util/Properties;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: getProperties:()Ljava/util/Properties;@java.lang.System
+	-1#1
+Control flow graph for getProperties:()Ljava/util/Properties;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: setProperties:(Ljava/util/Properties;)V@java.lang.System
+	-1#1
+Control flow graph for setProperties:(Ljava/util/Properties;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: getProperty:(Ljava/lang/String;)Ljava/lang/String;@java.lang.System
+	-1#1
+Control flow graph for getProperty:(Ljava/lang/String;)Ljava/lang/String;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: getProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;@java.lang.System
+	-1#1
+Control flow graph for getProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;@java.lang.System
+	-1#1
+Control flow graph for setProperty:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 2
+Method: clearProperty:(Ljava/lang/String;)Ljava/lang/String;@java.lang.System
+	-1#1
+Control flow graph for clearProperty:(Ljava/lang/String;)Ljava/lang/String;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: checkKey:(Ljava/lang/String;)V@java.lang.System
+	-1#1
+Control flow graph for checkKey:(Ljava/lang/String;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: getenv:(Ljava/lang/String;)Ljava/lang/String;@java.lang.System
+	-1#1
+Control flow graph for getenv:(Ljava/lang/String;)Ljava/lang/String;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: getenv:()Ljava/util/Map;@java.lang.System
+	-1#1
+Control flow graph for getenv:()Ljava/util/Map;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: exit:(I)V@java.lang.System
+	-1#1
+Control flow graph for exit:(I)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: gc:()V@java.lang.System
+	-1#1
+Control flow graph for gc:()V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: runFinalization:()V@java.lang.System
+	-1#1
+Control flow graph for runFinalization:()V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: runFinalizersOnExit:(Z)V@java.lang.System
+	-1#1
+Control flow graph for runFinalizersOnExit:(Z)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: load:(Ljava/lang/String;)V@java.lang.System
+	-1#1
+Control flow graph for load:(Ljava/lang/String;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: loadLibrary:(Ljava/lang/String;)V@java.lang.System
+	-1#1
+Control flow graph for loadLibrary:(Ljava/lang/String;)V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: mapLibraryName:(Ljava/lang/String;)Ljava/lang/String;@java.lang.System
+	-1#1
+Control flow graph for mapLibraryName:(Ljava/lang/String;)Ljava/lang/String;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 1
+Method: nullInputStream:()Ljava/io/InputStream;@java.lang.System
+	-1#1
+Control flow graph for nullInputStream:()Ljava/io/InputStream;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: nullPrintStream:()Ljava/io/PrintStream;@java.lang.System
+	-1#1
+Control flow graph for nullPrintStream:()Ljava/io/PrintStream;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: initializeSystemClass:()V@java.lang.System
+	-1#1
+Control flow graph for initializeSystemClass:()V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: setJavaLangAccess:()V@java.lang.System
+	-1#1
+Control flow graph for setJavaLangAccess:()V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: getCallerClass:()Ljava/lang/Class;@java.lang.System
+	-1#1
+Control flow graph for getCallerClass:()Ljava/lang/Class;@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_A AConst: null
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+Method: <clinit>:()V@java.lang.System
+	-1#1
+Control flow graph for <clinit>:()V@java.lang.System:
+BB0 (ENTRY)	(in: <none>, out: BB2)
+
+BB2	(in: BB0 (ENTRY), out: BB1 (EXIT))
+1: RETURN_V
+
+BB1 (EXIT)	(in: BB2, out: <none>)
+
+Exception handlers: []
+Register factory: Registers: 0
+ENTER: cspa-0cfa-dlog at Thu Jul 03 21:46:21 CDT 2014
+ENTER: F at Thu Jul 03 21:46:21 CDT 2014
+SAVING dom F size: 18
+LEAVE: F
+Exclusive time: 00:00:00:003 hh:mm:ss:ms
+Inclusive time: 00:00:00:003 hh:mm:ss:ms
+ENTER: V at Thu Jul 03 21:46:21 CDT 2014
+ENTER: M at Thu Jul 03 21:46:21 CDT 2014
+SAVING dom M size: 31
+LEAVE: M
+Exclusive time: 00:00:00:001 hh:mm:ss:ms
+Inclusive time: 00:00:00:001 hh:mm:ss:ms
+SAVING dom V size: 160
+LEAVE: V
+Exclusive time: 00:00:00:002 hh:mm:ss:ms
+Inclusive time: 00:00:00:003 hh:mm:ss:ms
+ENTER: ctxts-java at Thu Jul 03 21:46:21 CDT 2014
+ENTER: cipa-0cfa-dlog at Thu Jul 03 21:46:21 CDT 2014
+ENTER: T at Thu Jul 03 21:46:21 CDT 2014
+SAVING dom T size: 125
+LEAVE: T
+Exclusive time: 00:00:00:000 hh:mm:ss:ms
+Inclusive time: 00:00:00:000 hh:mm:ss:ms
+ENTER: H at Thu Jul 03 21:46:21 CDT 2014
+SAVING dom H size: 20
+LEAVE: H
+Exclusive time: 00:00:00:000 hh:mm:ss:ms
+Inclusive time: 00:00:00:000 hh:mm:ss:ms
+ENTER: I at Thu Jul 03 21:46:21 CDT 2014
+SAVING dom I size: 72
+LEAVE: I
+Exclusive time: 00:00:00:002 hh:mm:ss:ms
+Inclusive time: 00:00:00:002 hh:mm:ss:ms
+ENTER: Z at Thu Jul 03 21:46:21 CDT 2014
+SAVING dom Z size: 5
+LEAVE: Z
+Exclusive time: 00:00:00:001 hh:mm:ss:ms
+Inclusive time: 00:00:00:001 hh:mm:ss:ms
+ENTER: MmethArg at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel MmethArg size: 55
+LEAVE: MmethArg
+Exclusive time: 00:00:00:110 hh:mm:ss:ms
+Inclusive time: 00:00:00:110 hh:mm:ss:ms
+ENTER: VT at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel VT size: 160
+LEAVE: VT
+Exclusive time: 00:00:00:101 hh:mm:ss:ms
+Inclusive time: 00:00:00:101 hh:mm:ss:ms
+ENTER: virtIM at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel virtIM size: 22
+LEAVE: virtIM
+Exclusive time: 00:00:00:031 hh:mm:ss:ms
+Inclusive time: 00:00:00:031 hh:mm:ss:ms
+ENTER: sub at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel sub size: 56
+LEAVE: sub
+Exclusive time: 00:00:00:037 hh:mm:ss:ms
+Inclusive time: 00:00:00:037 hh:mm:ss:ms
+ENTER: IinvkRet at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel IinvkRet size: 18
+LEAVE: IinvkRet
+Exclusive time: 00:00:00:050 hh:mm:ss:ms
+Inclusive time: 00:00:00:050 hh:mm:ss:ms
+ENTER: objNewInst-java at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel objNewInstIH size: 0
+SAVING rel objNewInstIM size: 0
+LEAVE: objNewInst-java
+Exclusive time: 00:00:00:060 hh:mm:ss:ms
+Inclusive time: 00:00:00:060 hh:mm:ss:ms
+ENTER: aryNewInstIH at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel aryNewInstIH size: 0
+LEAVE: aryNewInstIH
+Exclusive time: 00:00:00:029 hh:mm:ss:ms
+Inclusive time: 00:00:00:029 hh:mm:ss:ms
+ENTER: staticTM at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel staticTM size: 7
+LEAVE: staticTM
+Exclusive time: 00:00:00:026 hh:mm:ss:ms
+Inclusive time: 00:00:00:026 hh:mm:ss:ms
+ENTER: staticTF at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel staticTF size: 6
+LEAVE: staticTF
+Exclusive time: 00:00:00:025 hh:mm:ss:ms
+Inclusive time: 00:00:00:025 hh:mm:ss:ms
+ENTER: MgetStatFldInst at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel MgetStatFldInst size: 4
+LEAVE: MgetStatFldInst
+Exclusive time: 00:00:00:026 hh:mm:ss:ms
+Inclusive time: 00:00:00:026 hh:mm:ss:ms
+ENTER: cha at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel cha size: 49
+LEAVE: cha
+Exclusive time: 00:00:00:036 hh:mm:ss:ms
+Inclusive time: 00:00:00:036 hh:mm:ss:ms
+ENTER: HT at Thu Jul 03 21:46:21 CDT 2014
+SAVING rel HT size: 19
+LEAVE: HT
+Exclusive time: 00:00:00:040 hh:mm:ss:ms
+Inclusive time: 00:00:00:040 hh:mm:ss:ms
+ENTER: MgetInstFldInst at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel MgetInstFldInst size: 10
+LEAVE: MgetInstFldInst
+Exclusive time: 00:00:00:041 hh:mm:ss:ms
+Inclusive time: 00:00:00:041 hh:mm:ss:ms
+ENTER: specIM at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel specIM size: 28
+LEAVE: specIM
+Exclusive time: 00:00:00:036 hh:mm:ss:ms
+Inclusive time: 00:00:00:036 hh:mm:ss:ms
+ENTER: classT at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel classT size: 10
+LEAVE: classT
+Exclusive time: 00:00:00:033 hh:mm:ss:ms
+Inclusive time: 00:00:00:033 hh:mm:ss:ms
+ENTER: MI at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel MI size: 72
+LEAVE: MI
+Exclusive time: 00:00:00:037 hh:mm:ss:ms
+Inclusive time: 00:00:00:037 hh:mm:ss:ms
+ENTER: MobjValAsgnInst at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel MobjValAsgnInst size: 19
+LEAVE: MobjValAsgnInst
+Exclusive time: 00:00:00:036 hh:mm:ss:ms
+Inclusive time: 00:00:00:036 hh:mm:ss:ms
+ENTER: clinitTM at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel clinitTM size: 2
+LEAVE: clinitTM
+Exclusive time: 00:00:00:032 hh:mm:ss:ms
+Inclusive time: 00:00:00:032 hh:mm:ss:ms
+ENTER: MobjVarAsgnInst at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel MobjVarAsgnInst size: 50
+LEAVE: MobjVarAsgnInst
+Exclusive time: 00:00:00:033 hh:mm:ss:ms
+Inclusive time: 00:00:00:033 hh:mm:ss:ms
+ENTER: conNewInst-java at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel conNewInstIH size: 0
+SAVING rel conNewInstIM size: 0
+LEAVE: conNewInst-java
+Exclusive time: 00:00:00:045 hh:mm:ss:ms
+Inclusive time: 00:00:00:045 hh:mm:ss:ms
+ENTER: IinvkArg0 at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel IinvkArg0 size: 70
+LEAVE: IinvkArg0
+Exclusive time: 00:00:00:025 hh:mm:ss:ms
+Inclusive time: 00:00:00:025 hh:mm:ss:ms
+ENTER: IinvkArg at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel IinvkArg size: 138
+LEAVE: IinvkArg
+Exclusive time: 00:00:00:027 hh:mm:ss:ms
+Inclusive time: 00:00:00:027 hh:mm:ss:ms
+ENTER: MmethRet at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel MmethRet size: 13
+LEAVE: MmethRet
+Exclusive time: 00:00:00:025 hh:mm:ss:ms
+Inclusive time: 00:00:00:025 hh:mm:ss:ms
+ENTER: clsForNameIT at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel clsForNameIT size: 0
+LEAVE: clsForNameIT
+Exclusive time: 00:00:00:036 hh:mm:ss:ms
+Inclusive time: 00:00:00:036 hh:mm:ss:ms
+ENTER: MputInstFldInst at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel MputInstFldInst size: 9
+LEAVE: MputInstFldInst
+Exclusive time: 00:00:00:023 hh:mm:ss:ms
+Inclusive time: 00:00:00:023 hh:mm:ss:ms
+ENTER: MputStatFldInst at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel MputStatFldInst size: 0
+LEAVE: MputStatFldInst
+Exclusive time: 00:00:00:020 hh:mm:ss:ms
+Inclusive time: 00:00:00:020 hh:mm:ss:ms
+ENTER: statIM at Thu Jul 03 21:46:22 CDT 2014
+SAVING rel statIM size: 22
+LEAVE: statIM
+Exclusive time: 00:00:00:022 hh:mm:ss:ms
+Inclusive time: 00:00:00:022 hh:mm:ss:ms
+Starting command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/chord_analyses_alias_cipa_0cfa.dlog '
+Relation IHM: 150 nodes, 172.0 elements (I0,M0,H0)
+Relation reachableT: 17 nodes, 7.0 elements (T0)
+Relation VHfilter: 110 nodes, 2316.0 elements (V0,H0)
+Relation VH: 222 nodes, 289.0 elements (V0,H0)
+Relation FH: 0 nodes, 0.0 elements ((none))
+Relation HFH: 72 nodes, 54.0 elements (H0,F0,H1)
+Relation rootM: 7 nodes, 3.0 elements (M0)
+Relation reachableI: 4 nodes, 72.0 elements (I0)
+Relation reachableM: 8 nodes, 29.0 elements (M0)
+Relation IM: 155 nodes, 71.0 elements (I0,M0)
+Relation MM: 88 nodes, 45.0 elements (M0,M1)
+Relation MMI: 294 nodes, 71.0 elements (I0,M0,M1)
+Finished command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/chord_analyses_alias_cipa_0cfa.dlog '
+LEAVE: cipa-0cfa-dlog
+Exclusive time: 00:00:00:620 hh:mm:ss:ms
+Inclusive time: 00:00:01:672 hh:mm:ss:ms
+SAVING dom C size: 20
+SAVING rel CI size: 72
+SAVING rel CH size: 19
+SAVING rel CC size: 20
+SAVING rel epsilonM size: 31
+SAVING rel kcfaSenM size: 0
+SAVING rel kobjSenM size: 0
+SAVING rel ctxtCpyM size: 0
+SAVING rel epsilonV size: 160
+LEAVE: ctxts-java
+Exclusive time: 00:00:00:221 hh:mm:ss:ms
+Inclusive time: 00:00:01:894 hh:mm:ss:ms
+Starting command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/chord_analyses_alias_cspa_0cfa.dlog '
+Relation CVC: 412 nodes, 289.0 elements (C0,C1,V0)
+Relation FC: 0 nodes, 0.0 elements ((none))
+Relation CFC: 72 nodes, 54.0 elements (C0,F0,C1)
+Relation rootCM: 12 nodes, 3.0 elements (C0,M0)
+Relation reachableCI: 9 nodes, 72.0 elements (C0,I0)
+Relation reachableCM: 13 nodes, 29.0 elements (C0,M0)
+Relation CICM: 165 nodes, 71.0 elements (C0,M0,I0,C1)
+Relation CMCM: 98 nodes, 45.0 elements (C0,M0,C1,M1)
+Finished command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/chord_analyses_alias_cspa_0cfa.dlog '
+LEAVE: cspa-0cfa-dlog
+Exclusive time: 00:00:00:276 hh:mm:ss:ms
+Inclusive time: 00:00:02:177 hh:mm:ss:ms
+ENTER: prune-dlog at Thu Jul 03 21:46:23 CDT 2014
+ENTER: prune-java at Thu Jul 03 21:46:23 CDT 2014
+SAVING rel TMM size: 45
+LEAVE: prune-java
+Exclusive time: 00:00:00:063 hh:mm:ss:ms
+Inclusive time: 00:00:00:063 hh:mm:ss:ms
+Starting command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/chord_analyses_alias_prune.dlog '
+Relation PMM: 83 nodes, 45.0 elements (M0,M1)
+Relation PIM: 171 nodes, 71.0 elements (I0,M0)
+Finished command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/chord_analyses_alias_prune.dlog '
+LEAVE: prune-dlog
+Exclusive time: 00:00:00:257 hh:mm:ss:ms
+Inclusive time: 00:00:00:320 hh:mm:ss:ms
+ENTER: cspa-downcast-java at Thu Jul 03 21:46:23 CDT 2014
+ENTER: cspa-downcast-dlog at Thu Jul 03 21:46:23 CDT 2014
+ENTER: MV at Thu Jul 03 21:46:23 CDT 2014
+SAVING rel MV size: 160
+LEAVE: MV
+Exclusive time: 00:00:00:026 hh:mm:ss:ms
+Inclusive time: 00:00:00:026 hh:mm:ss:ms
+ENTER: LibrariesM-dlog at Thu Jul 03 21:46:23 CDT 2014
+ENTER: TM at Thu Jul 03 21:46:23 CDT 2014
+SAVING rel TM size: 31
+LEAVE: TM
+Exclusive time: 00:00:00:021 hh:mm:ss:ms
+Inclusive time: 00:00:00:021 hh:mm:ss:ms
+ENTER: librariesT at Thu Jul 03 21:46:23 CDT 2014
+SAVING rel librariesT size: 13
+LEAVE: librariesT
+Exclusive time: 00:00:00:028 hh:mm:ss:ms
+Inclusive time: 00:00:00:028 hh:mm:ss:ms
+Starting command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/framework_scuba_analyses_librariesfilter_librariesM.dlog '
+Relation librariesM: 5 nodes, 31.0 elements (M0)
+Finished command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/framework_scuba_analyses_librariesfilter_librariesM.dlog '
+LEAVE: LibrariesM-dlog
+Exclusive time: 00:00:00:239 hh:mm:ss:ms
+Inclusive time: 00:00:00:288 hh:mm:ss:ms
+Starting command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/framework_scuba_analyses_downcast_cspadowncast.dlog '
+Relation dcm: 0 nodes, 0.0 elements ((none))
+Relation dcmVH: 0 nodes, 0.0 elements ((none))
+Relation reachableappsCM: 0 nodes, 0.0 elements ((none))
+Relation ptsVH: 222 nodes, 289.0 elements (V0,H0)
+Relation ptsVT: 154 nodes, 179.0 elements (V0,T0)
+Relation downcast: 0 nodes, 0.0 elements ((none))
+Relation unsafeDowncast: 0 nodes, 0.0 elements ((none))
+Relation safeDowncast: 0 nodes, 0.0 elements ((none))
+Relation AppLocal: 0 nodes, 0.0 elements ((none))
+Relation DcLocal: 0 nodes, 0.0 elements ((none))
+Finished command: 'java -ea -Xmx1048m -cp /home/yufeng/research/Scuba/lib/chord.jar: -Dverbose=1 -Dbdd=j -Dbasedir=/home/yufeng/workspace/Test1/chord_output/bddbddb net.sf.bddbddb.Solver /home/yufeng/workspace/Test1/chord_output/dlog/framework_scuba_analyses_downcast_cspadowncast.dlog '
+LEAVE: cspa-downcast-dlog
+Exclusive time: 00:00:00:323 hh:mm:ss:ms
+Inclusive time: 00:00:00:637 hh:mm:ss:ms
+Running Ctxts task is  cspa-0cfa-dlog
+TASK cspa-0cfa-dlog ALREADY DONE.
+TASK cspa-downcast-dlog ALREADY DONE.
+Total Reachable CMethod ::29
+Total Reachable Method ::29
+Total Reachable Methods inside CM :: 29
+Total Reachable AppsM inside CM :: 0
+Total downcast ::0
+nosafe  !! 0
+safe  !! 0
+Percentage unsafety NaN
+LEAVE: cspa-downcast-java
+Exclusive time: 00:00:00:137 hh:mm:ss:ms
+Inclusive time: 00:00:00:774 hh:mm:ss:ms
+ENTER: sum-java at Thu Jul 03 21:46:24 CDT 2014
+interval: A-->5
+Sub: B 4false
+interval: B-->4
+Sub: C 2false
+Sub: D 3false
+interval: C-->2
+Sub: E 1false
+interval: D-->3
+interval: E-->1
+interval: java.io.Closeable-->null
+interval: java.io.FilterOutputStream-->7
+Sub: java.io.PrintStream 6false
+Sub: java.io.BufferedOutputStream nullfalse
+interval: java.io.Flushable-->null
+interval: java.io.OutputStream-->8
+Sub: java.io.FilterOutputStream 7false
+Sub: java.io.FileOutputStream nullfalse
+interval: java.io.PrintStream-->6
+interval: java.lang.Appendable-->null
+interval: java.lang.Object-->10
+Sub: A 5false
+Sub: java.lang.System 9false
+Sub: java.io.OutputStream 8false
+Sub: java.io.Closeable nulltrue
+Sub: java.io.Flushable nulltrue
+Sub: java.lang.Appendable nulltrue
+Sub: java.lang.Throwable nullfalse
+Sub: java.io.Serializable nulltrue
+Sub: java.io.Writer nullfalse
+Sub: java.lang.Thread nullfalse
+Sub: java.lang.Runnable nulltrue
+Sub: java.lang.String nullfalse
+Sub: java.lang.Comparable nulltrue
+Sub: java.lang.CharSequence nulltrue
+Sub: java.util.Formatter nullfalse
+Sub: java.util.Locale nullfalse
+Sub: java.lang.Cloneable nulltrue
+Sub: java.lang.AbstractStringBuilder nullfalse
+Sub: java.lang.Class nullfalse
+Sub: java.lang.reflect.GenericDeclaration nulltrue
+Sub: java.lang.reflect.Type nulltrue
+Sub: java.lang.reflect.AnnotatedElement nulltrue
+Sub: java.lang.Number nullfalse
+Sub: java.io.Console nullfalse
+Sub: sun.misc.SharedSecrets nullfalse
+Sub: sun.misc.JavaIOAccess nulltrue
+Sub: java.nio.channels.spi.SelectorProvider nullfalse
+Sub: java.nio.channels.Channel nulltrue
+Sub: java.lang.SecurityManager nullfalse
+Sub: java.security.Permission nullfalse
+Sub: java.security.Guard nulltrue
+Sub: java.lang.ClassLoader nullfalse
+Sub: java.lang.System$1 nullfalse
+Sub: java.security.PrivilegedAction nulltrue
+Sub: java.security.AccessController nullfalse
+Sub: java.util.Dictionary nullfalse
+Sub: java.util.Map nulltrue
+Sub: java.lang.ProcessEnvironment nullfalse
+Sub: java.lang.Runtime nullfalse
+Sub: sun.misc.Version nullfalse
+Sub: java.io.InputStream nullfalse
+Sub: java.io.FileDescriptor nullfalse
+Sub: java.lang.Terminator nullfalse
+Sub: sun.misc.VM nullfalse
+Sub: java.lang.ThreadGroup nullfalse
+Sub: java.lang.Thread$UncaughtExceptionHandler nulltrue
+Sub: java.lang.System$2 nullfalse
+Sub: sun.misc.JavaLangAccess nulltrue
+Sub: sun.reflect.Reflection nullfalse
+interval: java.lang.System-->9
+[Performance] Total # of SCCs: 29
+[Performance] Total reachableM: 29
+[Performance] Before work on [Node:]scc1
+[Performance] Working on SCC: 1[<init>:()V@java.lang.Object]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 12.647922 ms.
+[Performance] Before work on [Node:]scc3
+[Performance] Working on SCC: 2[foo:()Ljava/lang/Object;@A]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 29.179104 ms.
+[Performance] Before work on [Node:]scc5
+[Performance] Working on SCC: 3[baz:()Ljava/lang/Object;@C]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 0.530697 ms.
+[Performance] Before work on [Node:]scc9
+[Performance] Working on SCC: 4[check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 6: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T4, T5)
+[Performance] Fail to find model for callee...6: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T4, T5)
+[Performance] handle callsite: 6: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T4, T5) In check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A Size: 0
+[Performance] Time to instantiate callsite: 6: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T4, T5) in 27.561175 ms.
+[Performance] [Handle invoke] 3: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T6, T7)
+[Performance] Fail to find model for callee...3: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T6, T7)
+[Performance] handle callsite: 3: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T6, T7) In check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A Size: 0
+[Performance] Time to instantiate callsite: 3: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T6, T7) in 0.127087 ms.
+[Performance] Analyzing SCC in  in 28.834987 ms.
+[Performance] Before work on [Node:]scc16
+[Performance] Working on SCC: 5[goo2:()Ljava/lang/Object;@B]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 0.636849 ms.
+[Performance] Before work on [Node:]scc18
+[Performance] Working on SCC: 6[goo:()Ljava/lang/Object;@B]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 0.558453 ms.
+[Performance] Before work on [Node:]scc19
+[Performance] Working on SCC: 7[goo:()Ljava/lang/Object;@C]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 0.892899 ms.
+[Performance] Before work on [Node:]scc20
+[Performance] Working on SCC: 8[goo:()Ljava/lang/Object;@E]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 0.931655 ms.
+[Performance] Before work on [Node:]scc28
+[Performance] Working on SCC: 9[<clinit>:()V@java.lang.Object]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 0.272778 ms.
+[Performance] Before work on [Node:]scc29
+[Performance] Working on SCC: 10[<clinit>:()V@java.lang.System]
+[Performance] Size of SCC: 1
+[Performance] Analyzing SCC in  in 0.255856 ms.
+[Performance] Before work on [Node:]scc4
+[Performance] Working on SCC: 11[baz:()Ljava/lang/Object;@B]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T2)
+[Performance] handle callsite: 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T2) In baz:()Ljava/lang/Object;@B Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T2) in 4.141765 ms.
+[Performance] Analyzing SCC in  in 6.197486 ms.
+[Performance] Before work on [Node:]scc2
+[Performance] Working on SCC: 12[<init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:()V@java.lang.Object, (R0)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:()V@java.lang.Object, (R0) In <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:()V@java.lang.Object, (R0) in 0.405898 ms.
+[Performance] Analyzing SCC in  in 1.366125 ms.
+[Performance] Before work on [Node:]scc10
+[Performance] Working on SCC: 13[<init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R0, R1, R2)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R0, R1, R2) In <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R0, R1, R2) in 2.175043 ms.
+[Performance] [Handle invoke] 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T4)
+[Performance] handle callsite: 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T4) In <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T4) in 0.432315 ms.
+[Performance] Analyzing SCC in  in 3.52695 ms.
+[Performance] Before work on [Node:]scc15
+[Performance] Working on SCC: 14[goo:()Ljava/lang/Object;@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKEVIRTUAL_A T1, foo:()Ljava/lang/Object;@A, (R0)
+[Performance] handle callsite: 1: INVOKEVIRTUAL_A T1, foo:()Ljava/lang/Object;@A, (R0) In goo:()Ljava/lang/Object;@A Size: 1
+[Performance] calleeSum Info: foo:()Ljava/lang/Object;@A
+[Performance] Time to instantiate callsite: 1: INVOKEVIRTUAL_A T1, foo:()Ljava/lang/Object;@A, (R0) in 0.909195 ms.
+[Performance] Analyzing SCC in  in 1.38393 ms.
+[Performance] Before work on [Node:]scc7
+[Performance] Working on SCC: 15[foo:()Ljava/lang/Object;@C]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKEVIRTUAL_A T1, baz:()Ljava/lang/Object;@C, (R0)
+[Performance] handle callsite: 1: INVOKEVIRTUAL_A T1, baz:()Ljava/lang/Object;@C, (R0) In foo:()Ljava/lang/Object;@C Size: 1
+[Performance] calleeSum Info: baz:()Ljava/lang/Object;@C
+[Performance] Time to instantiate callsite: 1: INVOKEVIRTUAL_A T1, baz:()Ljava/lang/Object;@C, (R0) in 0.862283 ms.
+[Performance] Analyzing SCC in  in 1.332912 ms.
+[Performance] Before work on [Node:]scc6
+[Performance] Working on SCC: 16[foo:()Ljava/lang/Object;@B]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKEVIRTUAL_A T3, baz:()Ljava/lang/Object;@B, (R0)
+debug cst(or (<= (type v46) 3) (= (type v46) 4)) FOR: baz:()Ljava/lang/Object;@B
+debug cst(<= (type v46) 2) FOR: baz:()Ljava/lang/Object;@C
+[Performance] handle callsite: 1: INVOKEVIRTUAL_A T3, baz:()Ljava/lang/Object;@B, (R0) In foo:()Ljava/lang/Object;@B Size: 2
+[Performance] calleeSum Info: baz:()Ljava/lang/Object;@B
+[Performance] calleeSum Info: baz:()Ljava/lang/Object;@C
+[Performance] Time to instantiate callsite: 1: INVOKEVIRTUAL_A T3, baz:()Ljava/lang/Object;@B, (R0) in 5.232263 ms.
+[Performance] Analyzing SCC in  in 5.94705 ms.
+[Performance] Before work on [Node:]scc17
+[Performance] Working on SCC: 17[goo3:()Ljava/lang/Object;@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKEVIRTUAL_A T1, goo2:()Ljava/lang/Object;@A, (R0)
+[Performance] handle callsite: 1: INVOKEVIRTUAL_A T1, goo2:()Ljava/lang/Object;@A, (R0) In goo3:()Ljava/lang/Object;@A Size: 1
+[Performance] calleeSum Info: goo2:()Ljava/lang/Object;@B
+[Performance] Time to instantiate callsite: 1: INVOKEVIRTUAL_A T1, goo2:()Ljava/lang/Object;@A, (R0) in 0.870375 ms.
+[Performance] Analyzing SCC in  in 1.362491 ms.
+[Performance] Before work on [Node:]scc22
+[Performance] Working on SCC: 18[<init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R0, R1, R2)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R0, R1, R2) In <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R0, R1, R2) in 1.3524 ms.
+[Performance] Analyzing SCC in  in 1.994631 ms.
+[Performance] Before work on [Node:]scc12
+[Performance] Working on SCC: 19[<init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2) In <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2) in 1.859719 ms.
+[Performance] [Handle invoke] 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T4)
+[Performance] handle callsite: 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T4) In <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T4) in 0.464553 ms.
+[Performance] Analyzing SCC in  in 3.205938 ms.
+[Performance] Before work on [Node:]scc11
+[Performance] Working on SCC: 20[<init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2) In <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2) in 1.915128 ms.
+[Performance] Analyzing SCC in  in 2.435027 ms.
+[Performance] Before work on [Node:]scc24
+[Performance] Working on SCC: 21[<init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2) In <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2) in 1.824042 ms.
+[Performance] Analyzing SCC in  in 2.463765 ms.
+[Performance] Before work on [Node:]scc8
+[Performance] Working on SCC: 22[bar:()Ljava/lang/Object;@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKEVIRTUAL_A T1, foo:()Ljava/lang/Object;@A, (R0)
+debug cst(= (type v147) 5) FOR: foo:()Ljava/lang/Object;@A
+debug cst(or (<= (type v147) 3) (= (type v147) 4)) FOR: foo:()Ljava/lang/Object;@B
+debug cst(<= (type v147) 2) FOR: foo:()Ljava/lang/Object;@C
+[Performance] handle callsite: 1: INVOKEVIRTUAL_A T1, foo:()Ljava/lang/Object;@A, (R0) In bar:()Ljava/lang/Object;@A Size: 3
+[Performance] calleeSum Info: foo:()Ljava/lang/Object;@A
+[Performance] calleeSum Info: foo:()Ljava/lang/Object;@B
+[Performance] calleeSum Info: foo:()Ljava/lang/Object;@C
+[Performance] Time to instantiate callsite: 1: INVOKEVIRTUAL_A T1, foo:()Ljava/lang/Object;@A, (R0) in 4.289144 ms.
+[Performance] Analyzing SCC in  in 4.750222 ms.
+[Performance] Before work on [Node:]scc21
+[Performance] Working on SCC: 23[test2_helper:(LA;LA;LA;LA;LA;)V@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKEVIRTUAL_A T15, goo:()Ljava/lang/Object;@A, (R0)
+[Performance] handle callsite: 1: INVOKEVIRTUAL_A T15, goo:()Ljava/lang/Object;@A, (R0) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: goo:()Ljava/lang/Object;@A
+[Performance] Time to instantiate callsite: 1: INVOKEVIRTUAL_A T15, goo:()Ljava/lang/Object;@A, (R0) in 0.822551 ms.
+[Performance] [Handle invoke] 3: INVOKEVIRTUAL_A T16, goo:()Ljava/lang/Object;@A, (R1)
+[Performance] handle callsite: 3: INVOKEVIRTUAL_A T16, goo:()Ljava/lang/Object;@A, (R1) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: goo:()Ljava/lang/Object;@B
+[Performance] Time to instantiate callsite: 3: INVOKEVIRTUAL_A T16, goo:()Ljava/lang/Object;@A, (R1) in 0.764306 ms.
+[Performance] [Handle invoke] 5: INVOKEVIRTUAL_A T17, goo:()Ljava/lang/Object;@A, (R2)
+[Performance] handle callsite: 5: INVOKEVIRTUAL_A T17, goo:()Ljava/lang/Object;@A, (R2) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: goo:()Ljava/lang/Object;@C
+[Performance] Time to instantiate callsite: 5: INVOKEVIRTUAL_A T17, goo:()Ljava/lang/Object;@A, (R2) in 1.214664 ms.
+[Performance] [Handle invoke] 7: INVOKEVIRTUAL_A T18, goo:()Ljava/lang/Object;@A, (R3)
+[Performance] handle callsite: 7: INVOKEVIRTUAL_A T18, goo:()Ljava/lang/Object;@A, (R3) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: goo:()Ljava/lang/Object;@B
+[Performance] Time to instantiate callsite: 7: INVOKEVIRTUAL_A T18, goo:()Ljava/lang/Object;@A, (R3) in 0.761901 ms.
+[Performance] [Handle invoke] 9: INVOKEVIRTUAL_A T19, goo:()Ljava/lang/Object;@A, (R4)
+[Performance] handle callsite: 9: INVOKEVIRTUAL_A T19, goo:()Ljava/lang/Object;@A, (R4) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: goo:()Ljava/lang/Object;@E
+[Performance] Time to instantiate callsite: 9: INVOKEVIRTUAL_A T19, goo:()Ljava/lang/Object;@A, (R4) in 1.657775 ms.
+[Performance] [Handle invoke] 11: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R7)
+[Performance] handle callsite: 11: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R7) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 11: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R7) in 0.403816 ms.
+[Performance] [Handle invoke] 12: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R8)
+[Performance] handle callsite: 12: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R8) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 12: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R8) in 0.364159 ms.
+[Performance] [Handle invoke] 13: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R9)
+[Performance] handle callsite: 13: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R9) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 13: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R9) in 0.35414 ms.
+[Performance] [Handle invoke] 14: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R10)
+[Performance] handle callsite: 14: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R10) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 14: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R10) in 0.34764 ms.
+[Performance] [Handle invoke] 15: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R8)
+[Performance] handle callsite: 15: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R8) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 15: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R8) in 0.347509 ms.
+[Performance] [Handle invoke] 16: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R9)
+[Performance] handle callsite: 16: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R9) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 16: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R9) in 0.367793 ms.
+[Performance] [Handle invoke] 17: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R10)
+[Performance] handle callsite: 17: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R10) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 17: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R7, R10) in 0.353421 ms.
+[Performance] [Handle invoke] 18: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R8, R9)
+[Performance] handle callsite: 18: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R8, R9) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 18: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R8, R9) in 0.356266 ms.
+[Performance] [Handle invoke] 19: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R8, R10)
+[Performance] handle callsite: 19: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R8, R10) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 19: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R8, R10) in 0.335845 ms.
+[Performance] [Handle invoke] 20: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R10)
+[Performance] handle callsite: 20: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R10) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 20: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R10) in 0.339977 ms.
+[Performance] [Handle invoke] 22: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T20, T11)
+[Performance] Fail to find model for callee...22: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T20, T11)
+[Performance] handle callsite: 22: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T20, T11) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 0
+[Performance] Time to instantiate callsite: 22: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T20, T11) in 0.112753 ms.
+[Performance] [Handle invoke] 24: INVOKEVIRTUAL_A T21, goo2:()Ljava/lang/Object;@A, (R2)
+[Performance] handle callsite: 24: INVOKEVIRTUAL_A T21, goo2:()Ljava/lang/Object;@A, (R2) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: goo2:()Ljava/lang/Object;@B
+[Performance] Time to instantiate callsite: 24: INVOKEVIRTUAL_A T21, goo2:()Ljava/lang/Object;@A, (R2) in 0.816209 ms.
+[Performance] [Handle invoke] 26: INVOKEVIRTUAL_A T22, goo2:()Ljava/lang/Object;@A, (R4)
+[Performance] handle callsite: 26: INVOKEVIRTUAL_A T22, goo2:()Ljava/lang/Object;@A, (R4) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: goo2:()Ljava/lang/Object;@B
+[Performance] Time to instantiate callsite: 26: INVOKEVIRTUAL_A T22, goo2:()Ljava/lang/Object;@A, (R4) in 0.941548 ms.
+[Performance] [Handle invoke] 28: INVOKEVIRTUAL_A T23, goo3:()Ljava/lang/Object;@A, (R2)
+[Performance] handle callsite: 28: INVOKEVIRTUAL_A T23, goo3:()Ljava/lang/Object;@A, (R2) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: goo3:()Ljava/lang/Object;@A
+[Performance] Time to instantiate callsite: 28: INVOKEVIRTUAL_A T23, goo3:()Ljava/lang/Object;@A, (R2) in 0.772374 ms.
+[Performance] [Handle invoke] 30: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R12)
+[Performance] handle callsite: 30: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R12) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 30: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R12) in 0.435413 ms.
+[Performance] [Handle invoke] 31: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R13)
+[Performance] handle callsite: 31: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R13) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 31: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R13) in 0.379757 ms.
+[Performance] [Handle invoke] 32: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R14)
+[Performance] handle callsite: 32: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R14) In test2_helper:(LA;LA;LA;LA;LA;)V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 32: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R6, R14) in 0.369927 ms.
+[Performance] Analyzing SCC in  in 15.288022 ms.
+[Performance] Before work on [Node:]scc23
+[Performance] Working on SCC: 24[<init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2, R3)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2, R3) In <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B, (R0, R1, R2, R3) in 1.689324 ms.
+[Performance] Analyzing SCC in  in 2.081779 ms.
+[Performance] Before work on [Node:]scc25
+[Performance] Working on SCC: 25[<init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (R0, R1, R2)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (R0, R1, R2) In <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (R0, R1, R2) in 1.536246 ms.
+[Performance] [Handle invoke] 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T5)
+[Performance] handle callsite: 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T5) In <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 4: INVOKESTATIC_V <init>:()V@java.lang.Object, (T5) in 0.326439 ms.
+[Performance] Analyzing SCC in  in 2.579953 ms.
+[Performance] Before work on [Node:]scc13
+[Performance] Working on SCC: 26[<init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (R0, R1, R2)
+[Performance] handle callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (R0, R1, R2) In <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (R0, R1, R2) in 1.478546 ms.
+[Performance] Analyzing SCC in  in 1.841563 ms.
+[Performance] Before work on [Node:]scc26
+[Performance] Working on SCC: 27[test2:()V@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T11)
+[Performance] handle callsite: 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T11) In test2:()V@A Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T11) in 0.305424 ms.
+[Performance] [Handle invoke] 7: INVOKESTATIC_V <init>:()V@java.lang.Object, (T13)
+[Performance] handle callsite: 7: INVOKESTATIC_V <init>:()V@java.lang.Object, (T13) In test2:()V@A Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 7: INVOKESTATIC_V <init>:()V@java.lang.Object, (T13) in 0.290455 ms.
+[Performance] [Handle invoke] 11: INVOKESTATIC_V <init>:()V@java.lang.Object, (T15)
+[Performance] handle callsite: 11: INVOKESTATIC_V <init>:()V@java.lang.Object, (T15) In test2:()V@A Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 11: INVOKESTATIC_V <init>:()V@java.lang.Object, (T15) in 0.303758 ms.
+[Performance] [Handle invoke] 15: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (T17, R2, R3)
+[Performance] handle callsite: 15: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (T17, R2, R3) In test2:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 15: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (T17, R2, R3) in 1.085327 ms.
+[Performance] [Handle invoke] 19: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B, (T19, R2, R3, R4)
+[Performance] handle callsite: 19: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B, (T19, R2, R3, R4) In test2:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+[Performance] Time to instantiate callsite: 19: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B, (T19, R2, R3, R4) in 1.360759 ms.
+[Performance] [Handle invoke] 23: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C, (T21, R2, R3, R4)
+[Performance] handle callsite: 23: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C, (T21, R2, R3, R4) In test2:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+[Performance] Time to instantiate callsite: 23: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C, (T21, R2, R3, R4) in 1.336478 ms.
+[Performance] [Handle invoke] 27: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D, (T23, R2, R3, R4)
+[Performance] handle callsite: 27: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D, (T23, R2, R3, R4) In test2:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+[Performance] Time to instantiate callsite: 27: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D, (T23, R2, R3, R4) in 1.659897 ms.
+[Performance] [Handle invoke] 31: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E, (T25, R2, R3, R4)
+[Performance] handle callsite: 31: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E, (T25, R2, R3, R4) In test2:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+[Performance] Time to instantiate callsite: 31: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E, (T25, R2, R3, R4) in 1.77759 ms.
+[Performance] [Handle invoke] 33: INVOKESTATIC_V test2_helper:(LA;LA;LA;LA;LA;)V@A, (R5, R6, R7, R8, R9)
+[Performance] handle callsite: 33: INVOKESTATIC_V test2_helper:(LA;LA;LA;LA;LA;)V@A, (R5, R6, R7, R8, R9) In test2:()V@A Size: 1
+[Performance] calleeSum Info: test2_helper:(LA;LA;LA;LA;LA;)V@A
+[Performance] Time to instantiate callsite: 33: INVOKESTATIC_V test2_helper:(LA;LA;LA;LA;LA;)V@A, (R5, R6, R7, R8, R9) in 1.972663 ms.
+[Performance] Analyzing SCC in  in 12.413875 ms.
+[Performance] Before work on [Node:]scc14
+[Performance] Working on SCC: 28[test1:()V@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T15)
+[Performance] handle callsite: 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T15) In test1:()V@A Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 3: INVOKESTATIC_V <init>:()V@java.lang.Object, (T15) in 0.294101 ms.
+[Performance] [Handle invoke] 7: INVOKESTATIC_V <init>:()V@java.lang.Object, (T17)
+[Performance] handle callsite: 7: INVOKESTATIC_V <init>:()V@java.lang.Object, (T17) In test1:()V@A Size: 1
+[Performance] calleeSum Info: <init>:()V@java.lang.Object
+[Performance] Time to instantiate callsite: 7: INVOKESTATIC_V <init>:()V@java.lang.Object, (T17) in 0.277244 ms.
+[Performance] [Handle invoke] 11: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (T19, R2, R3)
+[Performance] handle callsite: 11: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (T19, R2, R3) In test1:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 11: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (T19, R2, R3) in 1.023802 ms.
+[Performance] [Handle invoke] 15: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (T21, R2, R3)
+[Performance] handle callsite: 15: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (T21, R2, R3) In test1:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+[Performance] Time to instantiate callsite: 15: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B, (T21, R2, R3) in 1.372096 ms.
+[Performance] [Handle invoke] 19: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (T23, R2, R3)
+[Performance] handle callsite: 19: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (T23, R2, R3) In test1:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+[Performance] Time to instantiate callsite: 19: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C, (T23, R2, R3) in 1.274044 ms.
+[Performance] [Handle invoke] 23: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D, (T25, R2, R3)
+[Performance] handle callsite: 23: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D, (T25, R2, R3) In test1:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+[Performance] Time to instantiate callsite: 23: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D, (T25, R2, R3) in 1.686414 ms.
+[Performance] [Handle invoke] 27: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E, (T27, R2, R3)
+[Performance] handle callsite: 27: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E, (T27, R2, R3) In test1:()V@A Size: 1
+[Performance] calleeSum Info: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E
+[Performance] Time to instantiate callsite: 27: INVOKESTATIC_V <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E, (T27, R2, R3) in 1.216199 ms.
+[Performance] [Handle invoke] 29: INVOKEVIRTUAL_A T28, bar:()Ljava/lang/Object;@A, (R4)
+[Performance] handle callsite: 29: INVOKEVIRTUAL_A T28, bar:()Ljava/lang/Object;@A, (R4) In test1:()V@A Size: 1
+[Performance] calleeSum Info: bar:()Ljava/lang/Object;@A
+[Performance] Time to instantiate callsite: 29: INVOKEVIRTUAL_A T28, bar:()Ljava/lang/Object;@A, (R4) in 4.506725 ms.
+[Performance] [Handle invoke] 31: INVOKEVIRTUAL_A T29, bar:()Ljava/lang/Object;@A, (R5)
+[Performance] handle callsite: 31: INVOKEVIRTUAL_A T29, bar:()Ljava/lang/Object;@A, (R5) In test1:()V@A Size: 1
+[Performance] calleeSum Info: bar:()Ljava/lang/Object;@A
+[Performance] Time to instantiate callsite: 31: INVOKEVIRTUAL_A T29, bar:()Ljava/lang/Object;@A, (R5) in 3.105623 ms.
+[Performance] [Handle invoke] 33: INVOKEVIRTUAL_A T30, bar:()Ljava/lang/Object;@A, (R6)
+[Performance] handle callsite: 33: INVOKEVIRTUAL_A T30, bar:()Ljava/lang/Object;@A, (R6) In test1:()V@A Size: 1
+[Performance] calleeSum Info: bar:()Ljava/lang/Object;@A
+[Performance] Time to instantiate callsite: 33: INVOKEVIRTUAL_A T30, bar:()Ljava/lang/Object;@A, (R6) in 2.852771 ms.
+[Performance] [Handle invoke] 35: INVOKEVIRTUAL_A T31, bar:()Ljava/lang/Object;@A, (R7)
+[Performance] handle callsite: 35: INVOKEVIRTUAL_A T31, bar:()Ljava/lang/Object;@A, (R7) In test1:()V@A Size: 1
+[Performance] calleeSum Info: bar:()Ljava/lang/Object;@A
+[Performance] Time to instantiate callsite: 35: INVOKEVIRTUAL_A T31, bar:()Ljava/lang/Object;@A, (R7) in 2.894808 ms.
+[Performance] [Handle invoke] 37: INVOKEVIRTUAL_A T32, bar:()Ljava/lang/Object;@A, (R8)
+[Performance] handle callsite: 37: INVOKEVIRTUAL_A T32, bar:()Ljava/lang/Object;@A, (R8) In test1:()V@A Size: 1
+[Performance] calleeSum Info: bar:()Ljava/lang/Object;@A
+[Performance] Time to instantiate callsite: 37: INVOKEVIRTUAL_A T32, bar:()Ljava/lang/Object;@A, (R8) in 2.999816 ms.
+[Performance] [Handle invoke] 39: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R10)
+[Performance] handle callsite: 39: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R10) In test1:()V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 39: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R10) in 0.270349 ms.
+[Performance] [Handle invoke] 40: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R11)
+[Performance] handle callsite: 40: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R11) In test1:()V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 40: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R11) in 0.223532 ms.
+[Performance] [Handle invoke] 41: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R10, R11)
+[Performance] handle callsite: 41: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R10, R11) In test1:()V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 41: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R10, R11) in 0.21857 ms.
+[Performance] [Handle invoke] 42: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R12)
+[Performance] handle callsite: 42: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R12) In test1:()V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 42: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R12) in 0.217738 ms.
+[Performance] [Handle invoke] 43: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R13)
+[Performance] handle callsite: 43: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R13) In test1:()V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 43: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R9, R13) in 0.213696 ms.
+[Performance] [Handle invoke] 44: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R11, R13)
+[Performance] handle callsite: 44: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R11, R13) In test1:()V@A Size: 1
+[Performance] calleeSum Info: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+[Performance] Time to instantiate callsite: 44: INVOKESTATIC_V check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A, (R11, R13) in 0.211611 ms.
+[Performance] [Handle invoke] 46: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T33, T34)
+[Performance] Fail to find model for callee...46: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T33, T34)
+[Performance] handle callsite: 46: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T33, T34) In test1:()V@A Size: 0
+[Performance] Time to instantiate callsite: 46: INVOKEVIRTUAL_V println:(Ljava/lang/String;)V@java.io.PrintStream, (T33, T34) in 0.128756 ms.
+[Performance] Analyzing SCC in  in 28.20449 ms.
+[Performance] Before work on [Node:]scc27
+[Performance] Working on SCC: 29[main:([Ljava/lang/String;)V@A]
+[Performance] Size of SCC: 1
+[Performance] [Handle invoke] 1: INVOKESTATIC_V test1:()V@A, ()
+[Performance] handle callsite: 1: INVOKESTATIC_V test1:()V@A, () In main:([Ljava/lang/String;)V@A Size: 1
+[Performance] calleeSum Info: test1:()V@A
+[Performance] Time to instantiate callsite: 1: INVOKESTATIC_V test1:()V@A, () in 1.184154 ms.
+[Performance] [Handle invoke] 2: INVOKESTATIC_V test2:()V@A, ()
+[Performance] handle callsite: 2: INVOKESTATIC_V test2:()V@A, () In main:([Ljava/lang/String;)V@A Size: 1
+[Performance] calleeSum Info: test2:()V@A
+[Performance] Time to instantiate callsite: 2: INVOKESTATIC_V test2:()V@A, () in 1.145851 ms.
+[Performance] Analyzing SCC in  in 2.807724 ms.
+[Performance] [Concluding] starting to conclude all heaps...
+[Performance] Sum-based analysis runnint time:  in 243.560258 ms.
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 0
+True cst: 0
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@C
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@C
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@C
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@C
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@C
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@C
+Total: 5
+True cst: 5
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@B
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: main:([Ljava/lang/String;)V@A
+Total: 0
+True cst: 0
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo2:()Ljava/lang/Object;@B
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo2:()Ljava/lang/Object;@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo2:()Ljava/lang/Object;@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 5
+True cst: 5
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 6
+True cst: 6
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 7
+True cst: 7
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 8
+True cst: 8
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 9
+True cst: 9
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 10
+True cst: 10
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 11
+True cst: 11
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 12
+True cst: 12
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 14
+True cst: 14
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 15
+True cst: 15
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 16
+True cst: 16
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 17
+True cst: 17
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 18
+True cst: 18
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 19
+True cst: 19
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 20
+True cst: 20
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 21
+True cst: 21
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 22
+True cst: 22
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 23
+True cst: 23
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 24
+True cst: 24
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 25
+True cst: 25
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 26
+True cst: 26
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 27
+True cst: 27
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 28
+True cst: 28
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 29
+True cst: 29
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 30
+True cst: 30
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 31
+True cst: 31
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 32
+True cst: 32
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 33
+True cst: 33
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 34
+True cst: 34
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 35
+True cst: 35
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 36
+True cst: 36
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 39
+True cst: 39
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 40
+True cst: 40
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 41
+True cst: 41
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2:()V@A
+Total: 42
+True cst: 42
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 5
+True cst: 5
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 6
+True cst: 6
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 0
+True cst: 0
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: baz:()Ljava/lang/Object;@B
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: baz:()Ljava/lang/Object;@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: baz:()Ljava/lang/Object;@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: baz:()Ljava/lang/Object;@B
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@B
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@B
+Total: 3
+True cst: 1
+False cst: 0
+Other cst: 2
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@B
+Total: 3
+True cst: 1
+False cst: 0
+Other cst: 2
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@B
+Total: 5
+True cst: 1
+False cst: 0
+Other cst: 4
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@B
+Total: 6
+True cst: 2
+False cst: 0
+Other cst: 4
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@C
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@C
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@C
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: baz:()Ljava/lang/Object;@C
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: baz:()Ljava/lang/Object;@C
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: baz:()Ljava/lang/Object;@C
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 0
+True cst: 0
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@A
+Total: 0
+True cst: 0
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: foo:()Ljava/lang/Object;@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@E
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@E
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@E
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@E
+Total: 5
+True cst: 5
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@E
+Total: 7
+True cst: 7
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@E
+Total: 7
+True cst: 7
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 5
+True cst: 5
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 6
+True cst: 6
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 7
+True cst: 7
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 8
+True cst: 8
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 9
+True cst: 9
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 10
+True cst: 10
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 11
+True cst: 11
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 12
+True cst: 12
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 13
+True cst: 13
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 14
+True cst: 14
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 15
+True cst: 15
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 16
+True cst: 16
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 17
+True cst: 17
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 18
+True cst: 18
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 19
+True cst: 19
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 20
+True cst: 20
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 21
+True cst: 21
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 22
+True cst: 22
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 23
+True cst: 23
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 24
+True cst: 24
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 25
+True cst: 25
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 26
+True cst: 26
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 27
+True cst: 27
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 28
+True cst: 28
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 29
+True cst: 29
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 30
+True cst: 30
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 31
+True cst: 31
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 32
+True cst: 32
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 33
+True cst: 33
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 34
+True cst: 34
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 35
+True cst: 35
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 36
+True cst: 36
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 37
+True cst: 37
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 38
+True cst: 38
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 39
+True cst: 39
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 40
+True cst: 40
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 41
+True cst: 41
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 42
+True cst: 42
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 43
+True cst: 43
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 44
+True cst: 44
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 45
+True cst: 45
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 46
+True cst: 46
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test1:()V@A
+Total: 47
+True cst: 47
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: check_alias:(Ljava/lang/Object;Ljava/lang/Object;)V@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 5
+True cst: 5
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 6
+True cst: 6
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 7
+True cst: 7
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 7
+True cst: 7
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 8
+True cst: 8
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 9
+True cst: 9
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 11
+True cst: 11
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 12
+True cst: 12
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 13
+True cst: 13
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 13
+True cst: 13
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 14
+True cst: 14
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 14
+True cst: 14
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 15
+True cst: 15
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 16
+True cst: 16
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 17
+True cst: 17
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 18
+True cst: 18
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 18
+True cst: 18
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 18
+True cst: 18
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 20
+True cst: 20
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 21
+True cst: 21
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: test2_helper:(LA;LA;LA;LA;LA;)V@A
+Total: 23
+True cst: 23
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 0
+True cst: 0
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@D
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 5
+True cst: 5
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V@E
+Total: 6
+True cst: 6
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo3:()Ljava/lang/Object;@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo3:()Ljava/lang/Object;@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo3:()Ljava/lang/Object;@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 0
+True cst: 0
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@C
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@A
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: goo:()Ljava/lang/Object;@A
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: bar:()Ljava/lang/Object;@A
+Total: 2
+True cst: 0
+False cst: 0
+Other cst: 2
+----------------------------------------------
+Method: bar:()Ljava/lang/Object;@A
+Total: 4
+True cst: 0
+False cst: 0
+Other cst: 4
+----------------------------------------------
+Method: bar:()Ljava/lang/Object;@A
+Total: 4
+True cst: 0
+False cst: 0
+Other cst: 4
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 1
+True cst: 1
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 2
+True cst: 2
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 3
+True cst: 3
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 4
+True cst: 4
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:(Ljava/lang/Object;Ljava/lang/Object;)V@B
+Total: 5
+True cst: 5
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Method: <init>:()V@java.lang.Object
+Total: 0
+True cst: 0
+False cst: 0
+Other cst: 0
+----------------------------------------------
+Total: 188
+True cst: 180
+False cst: 0
+Other cst: 8
+
+ALOADS------------0
+ASTORES------------0
+Array------------0
+MultiArray------------0
+Total downcast------------0
+[Performance] Total Time on Library:  in 175.690374 ms.
+[Performance] Total Time on App:  in 0.0 ms.
+[Performance] Number of downcast: 0
+[Performance] [Scuba] final: 0
+[Performance] [Chord] final: 0
+[Performance] [Scuba] empty: 0
+[Performance] [Chord] empty: 0
+[Performance] May Alias Experiment--------------------------------
+Exception in thread "main" java.lang.RuntimeException: java.io.FileNotFoundException: /home/yufeng/workspace/Test1/chord_output/bddbddb/cspaVValias.bdd (No such file or directory)
+	at chord.bddbddb.Rel.load(Rel.java:279)
+	at chord.project.analyses.ProgramRel.load(ProgramRel.java:83)
+	at framework.scuba.analyses.alias.MayAliasAnalysis.run(MayAliasAnalysis.java:36)
+	at framework.scuba.analyses.alias.SummaryBasedAnalysis.init(SummaryBasedAnalysis.java:119)
+	at framework.scuba.analyses.alias.SummaryBasedAnalysis.run(SummaryBasedAnalysis.java:564)
+	at chord.project.ClassicProject.runTask(ClassicProject.java:393)
+	at chord.project.ClassicProject.runTask(ClassicProject.java:414)
+	at chord.project.ClassicProject.run(ClassicProject.java:107)
+	at chord.project.Main.run(Main.java:78)
+	at chord.project.Main.main(Main.java:50)
+Caused by: java.io.FileNotFoundException: /home/yufeng/workspace/Test1/chord_output/bddbddb/cspaVValias.bdd (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at java.io.FileReader.<init>(FileReader.java:55)
+	at chord.bddbddb.Rel.load(Rel.java:238)
+	... 9 more
