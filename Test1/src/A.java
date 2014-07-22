@@ -1,3 +1,5 @@
+import framework.scuba.helper.AliasHelper;
+
  
 public class A { 
 
@@ -25,12 +27,12 @@ public class A {
      Object w = v4.bar();
      Object zz = v5.bar();
      
-     check_alias(x, y); //true
-     check_alias(x, z); //false
-     check_alias(y, z);  //false
-     check_alias(x, w); // true;
-     check_alias(x, zz); // false
-     check_alias(z, zz); //false
+     AliasHelper.alias(x, y); //true
+     AliasHelper.notAlias(x, z); //false
+     AliasHelper.notAlias(y, z);  //false
+     AliasHelper.alias(x, w); // true;
+     AliasHelper.notAlias(x, zz); // false
+     AliasHelper.notAlias(z, zz); //false
      
      System.out.println("-----TEST1 DONE------");
    }
@@ -56,16 +58,16 @@ public class A {
      Object d = v4.goo(); // new object
      Object e = v5.goo(); // o1
      
-     check_alias(a, b); // false
-     check_alias(a, c); // false
-     check_alias(a, d); // false
-     check_alias(a, e); // true
-     check_alias(b,c); // true
-     check_alias(b,d); // false
-     check_alias(b,e); // false
-     check_alias(c,d); //false
-     check_alias(c,e); // false
-     check_alias(d,e); //false
+     AliasHelper.notAlias(a, b); // false
+     AliasHelper.notAlias(a, c); // false
+     AliasHelper.notAlias(a, d); // false
+     AliasHelper.alias(a, e); // true
+     AliasHelper.alias(b,c); // true
+     AliasHelper.notAlias(b,d); // false
+     AliasHelper.notAlias(b,e); // false
+     AliasHelper.notAlias(c,d); //false
+     AliasHelper.notAlias(c,e); // false
+     AliasHelper.notAlias(d,e); //false
      
 
      
@@ -74,16 +76,11 @@ public class A {
     Object f = v3.goo2();
     Object g = v5.goo2();
     Object h = v3.goo3();
-    check_alias(a, f); // false
-    check_alias(a, g); // true
-    check_alias(a, h); // false
-    check_alias(b, f); // true
+    AliasHelper.notAlias(a, f); // false
+    AliasHelper.alias(a, g); // true
+    AliasHelper.notAlias(a, h); // false
+    AliasHelper.alias(b, f); // true
       
-   }
-   
-   public static void check_alias(Object x, Object y){
-      if(x == y) System.out.println("Alias");
-      else System.out.println("Don't alias");
    }
    
    //--------------------------------------------

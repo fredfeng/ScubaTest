@@ -1,3 +1,5 @@
+import framework.scuba.helper.AliasHelper;
+
  
 public class A { 
 
@@ -34,23 +36,13 @@ public class A {
        Object o5 = test11(b);
        Object o6 = test11(c);
        
-       check_alias(o4, o5); //false
-       check_alias(o4, o6); //false
-       check_alias(o5, o6); //false
+       AliasHelper.notAlias(o4, o5); //false
+       AliasHelper.notAlias(o4, o6); //false
+       AliasHelper.notAlias(o5, o6); //false
 
    }
    
    public static Object test11(A a) {
       return a.foo();
    }
-   
-   public static void check_alias(Object x, Object y){
-      if(x == y) System.out.println("Alias");
-      else System.out.println("Don't alias");
-   }
-   
-   
-   
-   
-   
 }
