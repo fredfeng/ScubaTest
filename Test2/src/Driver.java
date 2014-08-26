@@ -1,34 +1,17 @@
+import scuba.test.container.Container;
+import scuba.test.container.Item;
+import scuba.test.container.ItemSettingVisitor;
+import scuba.test.container.Visitor;
+import scuba.test.virtualcall.A;
+import scuba.test.virtualcall.B;
+import scuba.test.virtualcall.Bldg;
+import scuba.test.virtualcall.C;
 import framework.scuba.helper.AliasHelper;
 
-public class A {
-
-	Object f;
-	Object g;
-	Object h;
-
-	A j;
-
-	A(Object o1, Object o2, Object o3) {
-		this.f = o1;
-		this.g = o2;
-		this.h = o3;
-	}
-
-	void m() {
-		this.j = this;
-	}
-
-	public Object foo() {
-		return f;
-	}
-
-	Object id(Object x) {
-		return x;
-	}
+public class Driver {
 
 	public static void main(String[] args) {
 		test1();
-
 	}
 
 	public static void test1() {
@@ -68,9 +51,31 @@ public class A {
 		AliasHelper.notAlias(a.j, a2);
 		AliasHelper.notAlias(a2.j, a);
 		AliasHelper.alias(a.j, a);
+
+		// test container.
+		testContainer();
 	}
 
 	public static Object test11(A a) {
 		return a.foo();
 	}
+
+	static void testContainer() {
+		Visitor visitor = new ItemSettingVisitor();
+
+		Container c1 = new Container();
+		Item i11 = new Item();
+		Item i12 = new Item();
+		c1.apply(visitor, i11);
+		c1.apply(visitor, i12);
+		AliasHelper.alias(c1.item, i11);
+
+		Container c2 = new Container();
+		Item i21 = new Item();
+		Item i22 = new Item();
+		c2.apply(visitor, i21);
+		c1.apply(visitor, i22);
+		AliasHelper.notAlias(c1.item, c2.item);
+	}
+
 }

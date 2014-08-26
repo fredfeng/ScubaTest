@@ -1,5 +1,7 @@
+package scuba.test.virtualcall;
+
 public class MyList {
-	Object[] elems;
+	public Object[] elems;
 
 	MyList() {
 		elems = new Object[42];
