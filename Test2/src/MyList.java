@@ -1,4 +1,3 @@
-
 public class MyList {
 	Object[] elems;
 

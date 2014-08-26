@@ -7,25 +7,25 @@ import java.util.List;
 public class C extends A {
 
 	private List<A> subScorer;
-	
+
 	private List<A> queue;
-	
+
 	public C(List<A> list) {
 		subScorer = list;
-		queue = new ArrayList();
+		queue = new ArrayList<A>();
 	}
-	
+
 	private void init() {
 		queue.clear();
 		Iterator<A> si = subScorer.iterator();
-		while(si.hasNext()) {
+		while (si.hasNext()) {
 			A se = si.next();
-			if(se.next()) {
+			if (se.next()) {
 				queue.add(se);
 			}
 		}
 	}
-	
+
 	@Override
 	public boolean skipTo(int i) {
 		// TODO Auto-generated method stub
@@ -39,15 +39,15 @@ public class C extends A {
 		init();
 		return doNext();
 	}
-	
+
 	public boolean doNext() {
 		Iterator<A> si = subScorer.iterator();
-		while(si.hasNext()) {
+		while (si.hasNext()) {
 			A a = si.next();
-			if(a.next())
+			if (a.next())
 				return a.skipTo(0);
 		}
-		
+
 		return false;
 	}
 

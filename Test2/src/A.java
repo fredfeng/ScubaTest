@@ -1,38 +1,36 @@
 import framework.scuba.helper.AliasHelper;
 
- 
-public class A { 
+public class A {
 
-   Object f;
-   Object g;
-   Object h;
-   
-   A j;
-   
-   A(Object o1, Object o2, Object o3) {
-     this.f = o1;
-     this.g = o2;
-     this.h = o3;
-   }
-   
+	Object f;
+	Object g;
+	Object h;
+
+	A j;
+
+	A(Object o1, Object o2, Object o3) {
+		this.f = o1;
+		this.g = o2;
+		this.h = o3;
+	}
+
 	void m() {
 		this.j = this;
 	}
-   
-   public Object foo() {
-     return f;
-   }
-   
+
+	public Object foo() {
+		return f;
+	}
+
 	Object id(Object x) {
 		return x;
 	}
 
-   public static void main(String[] args) { 
-     test1();
-     
-     
-   }
-   
+	public static void main(String[] args) {
+		test1();
+
+	}
+
 	public static void test1() {
 		// Original test case from Isil showing the precision by constraint.
 		Object o1 = new Object();
@@ -71,8 +69,8 @@ public class A {
 		AliasHelper.notAlias(a2.j, a);
 		AliasHelper.alias(a.j, a);
 	}
-   
-   public static Object test11(A a) {
-      return a.foo();
-   }
+
+	public static Object test11(A a) {
+		return a.foo();
+	}
 }
