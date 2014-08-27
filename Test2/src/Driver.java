@@ -12,7 +12,6 @@ import scuba.test.virtualcall.SubCst1;
 import scuba.test.virtualcall.SubCst2;
 import framework.scuba.helper.AliasHelper;
 
-
 public class Driver {
 
 	public static void main(String[] args) {
@@ -56,8 +55,8 @@ public class Driver {
 		AliasHelper.notAlias(a.j, a2);
 		AliasHelper.notAlias(a2.j, a);
 		AliasHelper.alias(a.j, a);
-		
-		//test container.
+
+		// test container.
 		testContainer();
 		
 		//testing conjunction and disjunction of cst.
