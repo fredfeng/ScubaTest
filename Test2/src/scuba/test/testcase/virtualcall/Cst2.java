@@ -1,4 +1,4 @@
-package scuba.test.virtualcall;
+package scuba.test.testcase.virtualcall;
 
 public class Cst2 extends Cst1 {
 	

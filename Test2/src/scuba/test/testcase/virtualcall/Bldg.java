@@ -1,4 +1,4 @@
-package scuba.test.virtualcall;
+package scuba.test.testcase.virtualcall;
 //http://indefinitestudies.org/2011/10/03/survey-of-call-graph-and-points-to-algorithms-in-java/
 public class Bldg {
 	public MyList events, floors;

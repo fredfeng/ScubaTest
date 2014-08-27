@@ -1,4 +1,4 @@
-package scuba.test.virtualcall;
+package scuba.test.testcase.virtualcall;
 
 public class SubCst1 {
 	public Object l, m;

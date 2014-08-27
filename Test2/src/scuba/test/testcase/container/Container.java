@@ -1,4 +1,4 @@
-package scuba.test.container;
+package scuba.test.testcase.container;
 
 public class Container {
 	public Item item;

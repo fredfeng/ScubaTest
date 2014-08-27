@@ -1,4 +1,4 @@
-package scuba.test.virtualcall;
+package scuba.test.testcase.virtualcall;
 
 public class SubCst2 extends SubCst1 {
 	public SubCst2(Object o1, Object o2) {
