@@ -9,10 +9,14 @@ public class B extends A {
 	public Object foo() {
 		return this.g;
 	}
-
-	public void bar(A x) {
-		k = x.goo();
-	}
+	
+//	public void buu() {
+//		return k.bar(x);
+//	}
+//
+//	public A bar(A x) {
+//		return x.goo();
+//	}
 
 	public A goo() {
 		return l;

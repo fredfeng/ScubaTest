@@ -26,12 +26,15 @@ public class A {
 		return x;
 	}
 	
-	public void bar(A x) {
-		k = x.goo();
+//	public Object buu() {
+//		return k.bar(x);
+//	}
+
+	public Object bar(A x) {
+		return x.goo();
 	}
 
-	public A goo() {
-		l = m;
-		return m;
+	public Object goo() {
+		return l;
 	}
 }
