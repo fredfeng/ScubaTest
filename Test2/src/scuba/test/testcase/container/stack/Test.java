@@ -33,6 +33,9 @@ public class Test {
         AliasHelper.notAlias(v2.f, o2);
         AliasHelper.alias(v2.f, o1);
 		l2.f = o2;
+		
+		//should be marked as no-op
+		s.iterator().remove();
 
         ListItem l3 = s.peek();
         AliasHelper.alias(l3.f, o2);

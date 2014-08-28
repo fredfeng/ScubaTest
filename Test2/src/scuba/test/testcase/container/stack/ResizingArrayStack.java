@@ -25,6 +25,7 @@ import java.util.NoSuchElementException;
 public class ResizingArrayStack<Item> implements Iterable<Item> {
 	private Item[] a; // array of items
 	private int N; // number of elements on stack
+	private int index;
 
     /**
      * Initializes an empty stack.
@@ -106,9 +107,13 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     // an iterator, doesn't implement remove() since it's optional
     private class ReverseArrayIterator implements Iterator<Item> {
         private int i;
+        private Item current, next, first, prev;
 
         public ReverseArrayIterator() {
             i = N;
+            Item[] t = a;
+            while (i < t.length && (next = a[index++]) == null)
+                ;
         }
 
         public boolean hasNext() {
@@ -116,7 +121,14 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
         }
 
         public void remove() {
-            throw new UnsupportedOperationException();
+        	//some dummy operations which our analysis should skip it.
+        	current = a[--i];
+        	if(current != null) {
+        		next = current; 
+        		prev = current;
+        		first = current;
+        	}
+        	current = null;
         }
 
         public Item next() {
