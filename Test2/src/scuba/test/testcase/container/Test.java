@@ -20,6 +20,10 @@ public class Test {
 		c2.apply(visitor, i21);
 		c1.apply(visitor, i22);
 		AliasHelper.notAlias(c1.item, c2.item);
+		
+		//test double linked list from princeton.
+		//the goal is to merge access paths in a sound way.
+		scuba.test.testcase.container.dlist.Test.run();
 	}
 
 }

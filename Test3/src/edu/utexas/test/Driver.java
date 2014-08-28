@@ -1,4 +1,4 @@
-package src.edu.utexas.test;
+package edu.utexas.test;
 
 public class Driver {
 
