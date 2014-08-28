@@ -26,6 +26,8 @@ public class Test {
 		tmhm.put(k2, l2);
 		ListItem v2 = tmhm.get(k2).getValue();
 		AliasHelper.alias(tmhm.get(k1), tmhm.get(k2));
+		AliasHelper.notAlias(v1, l2);
+		v1 = tmhm.get(k1).getValue();
 		AliasHelper.alias(v1, l2);
 		AliasHelper.alias(v1, v2);
 		AliasHelper.alias(v2, v1);
