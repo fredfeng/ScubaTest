@@ -17,7 +17,7 @@ public class Test {
 		test10();
 	}
 
-	// testing new and assignment
+	// test new and assignment
 	public static void test1() {
 		A t1 = new A();
 		A t2 = new A();
@@ -94,12 +94,36 @@ public class Test {
 		AliasHelper.alias(t4, t5);
 	}
 
+	// test condition
 	public static void test6() {
-
+		A t1 = new A();
+		A t2 = new A();
+		A t3 = null;
+		A t4 = null;
+		int i = 0;
+		if (i < 10) {
+			t3 = t1;
+			t4 = t2;
+		} else {
+			t3 = t2;
+			t4 = t1;
+		}
+		AliasHelper.alias(t3, t4);
+		AliasHelper.notAlias(t1, t2);
+		AliasHelper.alias(t1, t3);
+		AliasHelper.alias(t1, t4);
+		AliasHelper.alias(t2, t3);
+		AliasHelper.alias(t2, t4);
 	}
 
+	// test loop
 	public static void test7() {
-
+		A t1 = new A();
+		A t2 = null;
+		A t3 = null;
+		for (int i = 0; i < 10; i++) {
+			
+		}
 	}
 
 	public static void test8() {
