@@ -9,4 +9,9 @@ public class H3 extends H1{
 	public Object goo() {
 		return h;
 	}
+	
+	@Override
+	public void but() {
+		f = h;
+	}
 }

@@ -10,4 +10,9 @@ public class H2 extends H1 {
 		return g;
 	}
 
+	@Override
+	public void but() {
+		g = h;
+	}
+
 }
