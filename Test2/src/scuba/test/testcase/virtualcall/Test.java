@@ -4,7 +4,12 @@ import framework.scuba.helper.AliasHelper;
 
 public class Test {
 
-	public static void testCst() {
+	public static void test() {
+		test1();
+		test2();
+	}
+
+	public static void test1() {
 		Object o1 = new Object(); // o1
 		Object o2 = new Object(); // o2
 		SubCst1 sub1 = new SubCst1(o1, o2); // s1
@@ -30,7 +35,7 @@ public class Test {
 		AliasHelper.notAlias(o5, o6);
 	}
 
-	public static void test() {
+	public static void test2() {
 		// Original test case from Isil showing the precision by constraint.
 		Object o1 = new Object();
 		Object o2 = new Object();
