@@ -22,6 +22,14 @@ public class Test {
 		test15();
 		test16();
 		test17();
+		test18();
+		test19();
+		test20();
+		test21();
+		test22();
+		test23();
+		test24();
+		test25();
 	}
 
 	// test new and assignment
@@ -177,7 +185,7 @@ public class Test {
 		t1.j.g = new D();
 		t1.g.j = new D();
 		t1.g.g = new D();
-		D t2 = test8Helper1(t1);
+		D t2 = test9Helper1(t1);
 		AliasHelper.notAlias(t2, t1);
 		AliasHelper.notAlias(t2, t1.g);
 		AliasHelper.notAlias(t2, t1.g.j);
@@ -185,6 +193,10 @@ public class Test {
 		AliasHelper.alias(t2, t1.j);
 		AliasHelper.alias(t2, t1.j.j);
 		AliasHelper.notAlias(t2, t1.j.g);
+	}
+
+	public static D test9Helper1(D a1) {
+		return a1.j.j;
 	}
 
 	// test regular recursive field
@@ -324,19 +336,175 @@ public class Test {
 		t1.l.k.l = new F();
 		t1.l.k.l.k = t1.l.k;
 
+		// t2 = a1.h
 		F t2 = test14Helper1(t1);
+		AliasHelper.notAlias(t2, t1);
+		AliasHelper.notAlias(t2, t1.h.k.l.k);
+		AliasHelper.alias(t2, t1.h);
+		AliasHelper.alias(t2, t1.h.k.h);
+		AliasHelper.notAlias(t2, t1.h.k);
+		AliasHelper.notAlias(t2, t1.h.k.l);
+		AliasHelper.notAlias(t2, t1.l.k.h);
+		AliasHelper.notAlias(t2, t1.l);
+		AliasHelper.notAlias(t2, t1.l.k);
+		AliasHelper.notAlias(t2, t1.l.k.l.k);
+		AliasHelper.notAlias(t2, t1.l.k.l);
+		// t3 = a1.h.k.h
 		F t3 = test14Helper2(t1);
+		AliasHelper.notAlias(t3, t1);
+		AliasHelper.notAlias(t3, t1.h.k.l.k);
+		AliasHelper.alias(t3, t1.h);
+		AliasHelper.alias(t3, t1.h.k.h);
+		AliasHelper.notAlias(t3, t1.h.k);
+		AliasHelper.notAlias(t3, t1.h.k.l);
+		AliasHelper.notAlias(t3, t1.l.k.h);
+		AliasHelper.notAlias(t3, t1.l);
+		AliasHelper.notAlias(t3, t1.l.k);
+		AliasHelper.notAlias(t3, t1.l.k.l.k);
+		AliasHelper.notAlias(t3, t1.l.k.l);
+		// t4 = a1.h.k.l.k.h
 		F t4 = test14Helper3(t1);
+		AliasHelper.notAlias(t4, t1);
+		AliasHelper.notAlias(t4, t1.h.k.l.k);
+		AliasHelper.alias(t4, t1.h);
+		AliasHelper.alias(t4, t1.h.k.h);
+		AliasHelper.notAlias(t4, t1.h.k);
+		AliasHelper.alias(t4, t1.h.k.l);
+		AliasHelper.alias(t4, t1.l.k.h);
+		AliasHelper.notAlias(t4, t1.l);
+		AliasHelper.notAlias(t4, t1.l.k);
+		AliasHelper.notAlias(t4, t1.l.k.l.k);
+		AliasHelper.notAlias(t4, t1.l.k.l);
+		// t5 = a1.l
 		F t5 = test14Helper4(t1);
+		AliasHelper.notAlias(t5, t1);
+		AliasHelper.notAlias(t5, t1.h.k.l.k);
+		AliasHelper.notAlias(t5, t1.h);
+		AliasHelper.notAlias(t5, t1.h.k.h);
+		AliasHelper.notAlias(t5, t1.h.k);
+		AliasHelper.notAlias(t5, t1.h.k.l);
+		AliasHelper.notAlias(t5, t1.l.k.h);
+		AliasHelper.alias(t5, t1.l);
+		AliasHelper.notAlias(t5, t1.l.k);
+		AliasHelper.notAlias(t5, t1.l.k.l.k);
+		AliasHelper.notAlias(t5, t1.l.k.l);
+		// t6 = a1.l.k.l
 		F t6 = test14Helper5(t1);
+		AliasHelper.notAlias(t6, t1);
+		AliasHelper.notAlias(t6, t1.h.k.l.k);
+		AliasHelper.notAlias(t6, t1.h);
+		AliasHelper.notAlias(t6, t1.h.k.h);
+		AliasHelper.notAlias(t6, t1.h.k);
+		AliasHelper.notAlias(t6, t1.h.k.l);
+		AliasHelper.notAlias(t6, t1.l.k.h);
+		AliasHelper.alias(t6, t1.l);
+		AliasHelper.notAlias(t6, t1.l.k);
+		AliasHelper.notAlias(t6, t1.l.k.l.k);
+		AliasHelper.alias(t6, t1.l.k.l);
+		// t7 = a1.l.k.h.k.l
 		F t7 = test14Helper6(t1);
+		AliasHelper.notAlias(t7, t1);
+		AliasHelper.notAlias(t7, t1.h.k.l.k);
+		AliasHelper.notAlias(t7, t1.h);
+		AliasHelper.notAlias(t7, t1.h.k.h);
+		AliasHelper.notAlias(t7, t1.h.k);
+		AliasHelper.alias(t7, t1.h.k.l);
+		AliasHelper.alias(t7, t1.l.k.h);
+		AliasHelper.alias(t7, t1.l);
+		AliasHelper.notAlias(t7, t1.l.k);
+		AliasHelper.notAlias(t7, t1.l.k.l.k);
+		AliasHelper.alias(t7, t1.l.k.l);
+		// t8 = a1.h.k
 		E t8 = test14Helper7(t1);
+		AliasHelper.notAlias(t8, t1);
+		AliasHelper.notAlias(t8, t1.h.k.l.k);
+		AliasHelper.notAlias(t8, t1.h);
+		AliasHelper.notAlias(t8, t1.h.k.h);
+		AliasHelper.alias(t8, t1.h.k);
+		AliasHelper.notAlias(t8, t1.h.k.l);
+		AliasHelper.notAlias(t8, t1.l.k.h);
+		AliasHelper.notAlias(t8, t1.l);
+		AliasHelper.notAlias(t8, t1.l.k);
+		AliasHelper.notAlias(t8, t1.l.k.l.k);
+		AliasHelper.notAlias(t8, t1.l.k.l);
+		// t9 = a1.h.k.h.k
 		E t9 = test14Helper8(t1);
+		AliasHelper.notAlias(t9, t1);
+		AliasHelper.notAlias(t9, t1.h.k.l.k);
+		AliasHelper.notAlias(t9, t1.h);
+		AliasHelper.notAlias(t9, t1.h.k.h);
+		AliasHelper.alias(t9, t1.h.k);
+		AliasHelper.notAlias(t9, t1.h.k.l);
+		AliasHelper.notAlias(t9, t1.l.k.h);
+		AliasHelper.notAlias(t9, t1.l);
+		AliasHelper.notAlias(t9, t1.l.k);
+		AliasHelper.notAlias(t9, t1.l.k.l.k);
+		AliasHelper.notAlias(t9, t1.l.k.l);
+		// t10 = a1.h.k.l.k
 		E t10 = test14Helper9(t1);
+		AliasHelper.alias(t10, t1);
+		AliasHelper.alias(t10, t1.h.k.l.k);
+		AliasHelper.notAlias(t10, t1.h);
+		AliasHelper.notAlias(t10, t1.h.k.h);
+		AliasHelper.alias(t10, t1.h.k);
+		AliasHelper.notAlias(t10, t1.h.k.l);
+		AliasHelper.notAlias(t10, t1.l.k.h);
+		AliasHelper.notAlias(t10, t1.l);
+		AliasHelper.alias(t10, t1.l.k);
+		AliasHelper.alias(t10, t1.l.k.l.k);
+		AliasHelper.notAlias(t10, t1.l.k.l);
+		// t11 = a1.h.k.h.k.l.k
 		E t11 = test14Helper10(t1);
+		AliasHelper.alias(t11, t1);
+		AliasHelper.alias(t11, t1.h.k.l.k);
+		AliasHelper.notAlias(t11, t1.h);
+		AliasHelper.notAlias(t11, t1.h.k.h);
+		AliasHelper.alias(t11, t1.h.k);
+		AliasHelper.notAlias(t11, t1.h.k.l);
+		AliasHelper.notAlias(t11, t1.l.k.h);
+		AliasHelper.notAlias(t11, t1.l);
+		AliasHelper.alias(t11, t1.l.k);
+		AliasHelper.alias(t11, t1.l.k.l.k);
+		AliasHelper.notAlias(t11, t1.l.k.l);
+		// t12 = a1.l.k
 		E t12 = test14Helper11(t1);
+		AliasHelper.notAlias(t12, t1);
+		AliasHelper.notAlias(t12, t1.h.k.l.k);
+		AliasHelper.notAlias(t12, t1.h);
+		AliasHelper.notAlias(t12, t1.h.k.h);
+		AliasHelper.notAlias(t12, t1.h.k);
+		AliasHelper.notAlias(t12, t1.h.k.l);
+		AliasHelper.notAlias(t12, t1.l.k.h);
+		AliasHelper.notAlias(t12, t1.l);
+		AliasHelper.alias(t12, t1.l.k);
+		AliasHelper.alias(t12, t1.l.k.l.k);
+		AliasHelper.notAlias(t12, t1.l.k.l);
+		// t12 = a1.l.k.l.k
 		E t13 = test14Helper12(t1);
+		AliasHelper.notAlias(t13, t1);
+		AliasHelper.notAlias(t13, t1.h.k.l.k);
+		AliasHelper.notAlias(t13, t1.h);
+		AliasHelper.notAlias(t13, t1.h.k.h);
+		AliasHelper.notAlias(t13, t1.h.k);
+		AliasHelper.notAlias(t13, t1.h.k.l);
+		AliasHelper.notAlias(t13, t1.l.k.h);
+		AliasHelper.notAlias(t13, t1.l);
+		AliasHelper.alias(t13, t1.l.k);
+		AliasHelper.alias(t13, t1.l.k.l.k);
+		AliasHelper.notAlias(t13, t1.l.k.l);
+		// t14 = a1.l.k.l.k.h.k
 		E t14 = test14Helper13(t1);
+		AliasHelper.alias(t14, t1);
+		AliasHelper.alias(t14, t1.h.k.l.k);
+		AliasHelper.notAlias(t14, t1.h);
+		AliasHelper.notAlias(t14, t1.h.k.h);
+		AliasHelper.alias(t14, t1.h.k);
+		AliasHelper.notAlias(t14, t1.h.k.l);
+		AliasHelper.notAlias(t14, t1.l.k.h);
+		AliasHelper.notAlias(t14, t1.l);
+		AliasHelper.alias(t14, t1.l.k);
+		AliasHelper.alias(t14, t1.l.k.l.k);
+		AliasHelper.notAlias(t14, t1.l.k.l);
 	}
 
 	public static F test14Helper1(E a1) {
@@ -400,6 +568,38 @@ public class Test {
 	}
 
 	public static void test17() {
+
+	}
+
+	public static void test18() {
+
+	}
+
+	public static void test19() {
+
+	}
+
+	public static void test20() {
+
+	}
+
+	public static void test21() {
+
+	}
+
+	public static void test22() {
+
+	}
+
+	public static void test23() {
+
+	}
+
+	public static void test24() {
+
+	}
+
+	public static void test25() {
 
 	}
 
