@@ -24,6 +24,10 @@ public class Test {
 		//test double linked list from princeton.
 		//the goal is to merge access paths in a sound way.
 		scuba.test.testcase.container.dlist.Test.run();
+		//map
+		scuba.test.testcase.container.map.Test.run();
+		//stack
+		scuba.test.testcase.container.stack.Test.run();
 	}
 
 }
