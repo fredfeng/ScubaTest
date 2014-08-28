@@ -11,9 +11,14 @@ public class Test {
 	public static void test() {
 		test1();
 		test2();
+		test3();
+		test4();
+		test5();
 	}
 
 	public static void test1() {
+		//original test cases from Isil. 
+		//basic functionalities for constraint.
 		Object o1 = new Object(); // o1
 		Object o2 = new Object(); // o2
 		SubCst1 sub1 = new SubCst1(o1, o2); // s1
@@ -56,7 +61,14 @@ public class Test {
 		AliasHelper.notAlias(o4, o5); // false
 		AliasHelper.notAlias(o4, o6); // false
 		AliasHelper.notAlias(o5, o6); // false
+	}
+	
+	public static void test3() {
+		Object o1 = new Object();
+		Object o2 = new Object();
+		Object o3 = new Object();
 
+		A a = new A(o1, o2, o3);
 		// Showing array allocated in different obj.
 		Bldg bldg = new Bldg();
 		AliasHelper.notAlias(bldg.events.elems, bldg.floors.elems);// false
@@ -67,7 +79,14 @@ public class Test {
 		Object z = a.id(x); // z -> o1
 		Object w = a.id(y); // w -> o2
 		AliasHelper.notAlias(z, w); // false
+	}
+	
+	public static void test4() {
+		Object o1 = new Object();
+		Object o2 = new Object();
+		Object o3 = new Object();
 
+		A a = new A(o1, o2, o3);
 		// test case to show that kobj is better than kcfa
 		A a2 = new A(o1, o2, o3); // a1
 		boolean p = true;
@@ -76,7 +95,9 @@ public class Test {
 		AliasHelper.notAlias(a.j, a2);
 		AliasHelper.notAlias(a2.j, a);
 		AliasHelper.alias(a.j, a);
-		
+	}
+	
+	public static void test5() {
 		//test whether we can generate the correct interval constraints.
 		Object o7 = new Object();
 		Object o8 = new Object();
