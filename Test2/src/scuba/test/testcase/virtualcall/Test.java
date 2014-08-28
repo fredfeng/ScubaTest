@@ -1,5 +1,9 @@
 package scuba.test.testcase.virtualcall;
 
+import scuba.test.testcase.virtualcall.inherit.H1;
+import scuba.test.testcase.virtualcall.inherit.H2;
+import scuba.test.testcase.virtualcall.inherit.H3;
+import scuba.test.testcase.virtualcall.inherit.H4;
 import framework.scuba.helper.AliasHelper;
 
 public class Test {
@@ -72,7 +76,23 @@ public class Test {
 		AliasHelper.notAlias(a.j, a2);
 		AliasHelper.notAlias(a2.j, a);
 		AliasHelper.alias(a.j, a);
-
+		
+		//test whether we can generate the correct interval constraints.
+		Object o7 = new Object();
+		Object o8 = new Object();
+		Object o9 = new Object();
+		H1 h1 = new H1(o7, o8, o9);
+		H1 h2 = new H2(o7, o8, o9);
+		H1 h3 = new H3(o7, o8, o9);
+		H1 h4 = new H4(o7, o8, o9);
+		Object o10 = h2.foo();
+		Object o11 = h3.foo();
+		Object o12 = h4.foo();
+		Object o13 = h1.foo();
+		AliasHelper.notAlias(o10, o11);
+		AliasHelper.notAlias(o11, o12);
+		AliasHelper.notAlias(o10, o13);
+		AliasHelper.alias(o10, o12);
 	}
 
 	public static Object test11(A a) {
