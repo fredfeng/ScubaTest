@@ -5,6 +5,7 @@ import framework.scuba.helper.AliasHelper;
 public class Test {
 
 	public static void test() {
+		/* test simple control flow */
 		test1();
 		test2();
 		test3();
@@ -12,6 +13,7 @@ public class Test {
 		test5();
 		test6();
 		test7();
+		/* test regular recursive field */
 		test8();
 		test9();
 		test10();
@@ -19,6 +21,7 @@ public class Test {
 		test12();
 		test13();
 		test14();
+		/* test index recursive field */
 		test15();
 		test16();
 		test17();
@@ -592,29 +595,272 @@ public class Test {
 		return a1.l.k.l.k.h.k;
 	}
 
-	// test array index field
 	public static void test15() {
-		
+		D t1 = new D();
+		t1.j = new D();
+		t1.j.j = new D();
+		t1.j.j.j = new D();
+		D t2 = test15Helper1(t1);
+		AliasHelper.notAlias(t2, t1);
+		AliasHelper.alias(t2, t1.j);
+		AliasHelper.alias(t2, t1.j.j);
+		AliasHelper.alias(t2, t1.j.j.j);
 	}
 
+	public static D test15Helper1(D a1) {
+		int i = 0;
+		if (i < 10) {
+			return a1.j;
+		} else {
+			return a1.j.j.j;
+		}
+	}
+
+	// test allocating multi-array
 	public static void test16() {
-
+		A[][] t1 = new A[2][];
+		A[] t2 = new A[1];
+		t1[0] = t2;
+		A[] t3 = new A[1];
+		t1[1] = t3;
+		AliasHelper.alias(t1[0], t1[1]);
+		AliasHelper.alias(t1[0], t2);
+		AliasHelper.alias(t1[1], t3);
+		AliasHelper.notAlias(t2, t3);
 	}
 
+	// test index field transitive closure
 	public static void test17() {
+		A[][] t1 = new A[1][];
+		t1[0] = new A[1];
+		t1[0][0] = new A();
 
+		A t2 = test17Helper1(t1);
+		AliasHelper.notAlias(t2, t1);
+		AliasHelper.notAlias(t2, t1[0]);
+		AliasHelper.alias(t2, t1[0][0]);
+
+		A[] t3 = test17Helper2(t1);
+		AliasHelper.notAlias(t3, t1);
+		AliasHelper.alias(t3, t1[0]);
+		AliasHelper.notAlias(t3, t1[0][0]);
+
+		Object t4 = test17Helper3(t1);
+		AliasHelper.notAlias(t4, t1);
+		AliasHelper.alias(t4, t1[0]);
+		AliasHelper.alias(t4, t1[0][0]);
+
+		Object t5 = test17Helper4(t1);
+		AliasHelper.alias(t5, t1);
+		AliasHelper.alias(t5, t1[0]);
+		AliasHelper.alias(t5, t1[0][0]);
 	}
 
+	public static A test17Helper1(A[][] a1) {
+		return a1[0][0];
+	}
+
+	public static A[] test17Helper2(A[][] a1) {
+		return a1[0];
+	}
+
+	public static Object test17Helper3(A[][] a1) {
+		int i = 0;
+		if (i < 10) {
+			return a1[0];
+		} else {
+			return a1[0][0];
+		}
+	}
+
+	public static Object test17Helper4(A[][] a1) {
+		int i = 0;
+		if (i < 10) {
+			return a1;
+		} else if (i < 100) {
+			return a1[0];
+		} else {
+			return a1[0][0];
+		}
+	}
+
+	// test index field transitive closure
 	public static void test18() {
+		A[][] t1 = new A[2][];
+		t1[0] = new A[2];
+		t1[1] = new A[2];
+		t1[0][0] = new A();
+		t1[0][1] = new A();
+		t1[1][0] = new A();
+		t1[1][1] = new A();
 
+		A t2 = test18Helper1(t1);
+		AliasHelper.notAlias(t2, t1);
+		AliasHelper.notAlias(t2, t1[0]);
+		AliasHelper.notAlias(t2, t1[1]);
+		AliasHelper.alias(t2, t1[0][0]);
+		AliasHelper.alias(t2, t1[0][1]);
+		AliasHelper.alias(t2, t1[1][0]);
+		AliasHelper.alias(t2, t1[1][1]);
+
+		A[] t3 = test18Helper2(t1);
+		AliasHelper.notAlias(t3, t1);
+		AliasHelper.alias(t3, t1[0]);
+		AliasHelper.alias(t3, t1[1]);
+		AliasHelper.notAlias(t3, t1[0][0]);
+		AliasHelper.notAlias(t3, t1[0][1]);
+		AliasHelper.notAlias(t3, t1[1][0]);
+		AliasHelper.notAlias(t3, t1[1][1]);
+
+		A t4 = test18Helper3(t1);
+		AliasHelper.notAlias(t4, t1);
+		AliasHelper.notAlias(t4, t1[0]);
+		AliasHelper.notAlias(t4, t1[1]);
+		AliasHelper.alias(t4, t1[0][0]);
+		AliasHelper.alias(t4, t1[0][1]);
+		AliasHelper.alias(t4, t1[1][0]);
+		AliasHelper.alias(t4, t1[1][1]);
+
+		A[] t5 = test18Helper4(t1);
+		AliasHelper.notAlias(t5, t1);
+		AliasHelper.alias(t5, t1[0]);
+		AliasHelper.alias(t5, t1[1]);
+		AliasHelper.notAlias(t5, t1[0][0]);
+		AliasHelper.notAlias(t5, t1[0][1]);
+		AliasHelper.notAlias(t5, t1[1][0]);
+		AliasHelper.notAlias(t5, t1[1][1]);
+
+		Object t6 = test18Helper5(t1);
+		AliasHelper.notAlias(t6, t1);
+		AliasHelper.alias(t6, t1[0]);
+		AliasHelper.alias(t6, t1[1]);
+		AliasHelper.alias(t6, t1[0][0]);
+		AliasHelper.alias(t6, t1[0][1]);
+		AliasHelper.alias(t6, t1[1][0]);
+		AliasHelper.alias(t6, t1[1][1]);
+
+		Object t7 = test18Helper6(t1);
+		AliasHelper.alias(t7, t1);
+		AliasHelper.alias(t7, t1[0]);
+		AliasHelper.alias(t7, t1[1]);
+		AliasHelper.alias(t7, t1[0][0]);
+		AliasHelper.alias(t7, t1[0][1]);
+		AliasHelper.alias(t7, t1[1][0]);
+		AliasHelper.alias(t7, t1[1][1]);
 	}
 
+	public static A test18Helper1(A[][] a1) {
+		return a1[0][0];
+	}
+
+	public static A[] test18Helper2(A[][] a1) {
+		return a1[0];
+	}
+
+	public static A test18Helper3(A[][] a1) {
+		int i = 0;
+		if (i < 10) {
+			return a1[0][0];
+		} else {
+			return a1[0][1];
+		}
+	}
+
+	public static A[] test18Helper4(A[][] a1) {
+		int i = 0;
+		if (i < 10) {
+			return a1[0];
+		} else {
+			return a1[1];
+		}
+	}
+
+	public static Object test18Helper5(A[][] a1) {
+		int i = 0;
+		if (i < 10) {
+			return a1[0];
+		} else {
+			return a1[0][0];
+		}
+	}
+
+	public static Object test18Helper6(A[][] a1) {
+		int i = 0;
+		if (i < 10) {
+			return a1;
+		} else if (i < 100) {
+			return a1[0];
+		} else {
+			return a1[0][0];
+		}
+	}
+
+	// test mixing regular field and index field transitive closure
 	public static void test19() {
-
+		G t1 = new G();
+		t1.f = new H[1];
+		t1.f[0] = new H();
+		t1.f[0].g = new A[1];
+		t1.f[0].g[0] = new A();
+		// t2 = t1.f.i.g.i (not smash)
+		A t2 = test19Helper1(t1);
+		AliasHelper.notAlias(t2, t1);
+		AliasHelper.notAlias(t2, t1.f);
+		AliasHelper.notAlias(t2, t1.f[0]);
+		AliasHelper.notAlias(t2, t1.f[0].g);
+		AliasHelper.alias(t2, t1.f[0].g[0]);
+		// t3 = t1.f.i
+		H t3 = test19Helper2(t1);
+		AliasHelper.notAlias(t3, t1);
+		AliasHelper.notAlias(t3, t1.f);
+		AliasHelper.alias(t3, t1.f[0]);
+		AliasHelper.notAlias(t3, t1.f[0].g);
+		AliasHelper.notAlias(t3, t1.f[0].g[0]);
 	}
 
-	public static void test20() {
+	public static A test19Helper1(G a1) {
+		return a1.f[0].g[0];
+	}
 
+	public static H test19Helper2(G a1) {
+		return a1.f[0];
+	}
+
+	// test mixing regular and index field transitive closure
+	public static void test20() {
+		G t1 = new G();
+		t1.f = new H[1];
+		t1.f[0] = new H();
+		t1.f[0].h = new G[1];
+		t1.f[0].h[0] = new G();
+		t1.f[0].h[0].f = new H[1];
+		t1.f[0].h[0].f[0] = new H();
+		// t2 = t1.f.i.h.i.f
+		H[] t2 = test20Helper1(t1);
+		AliasHelper.notAlias(t2, t1);
+		AliasHelper.alias(t2, t1.f);
+		AliasHelper.notAlias(t2, t1.f[0]);
+		AliasHelper.notAlias(t2, t1.f[0].h);
+		AliasHelper.notAlias(t2, t1.f[0].h[0]);
+		AliasHelper.alias(t2, t1.f[0].h[0].f);
+		AliasHelper.notAlias(t2, t1.f[0].h[0].f[0]);
+		// t3 = t1.f.i.h.i.f.i
+		H t3 = test20Helper2(t1);
+		AliasHelper.notAlias(t3, t1);
+		AliasHelper.notAlias(t3, t1.f);
+		AliasHelper.alias(t3, t1.f[0]);
+		AliasHelper.notAlias(t3, t1.f[0].h);
+		AliasHelper.notAlias(t3, t1.f[0].h[0]);
+		AliasHelper.notAlias(t3, t1.f[0].h[0].f);
+		AliasHelper.alias(t3, t1.f[0].h[0].f[0]);
+	}
+
+	public static H[] test20Helper1(G a1) {
+		return a1.f[0].h[0].f;
+	}
+
+	public static H test20Helper2(G a1) {
+		return a1.f[0].h[0].f[0];
 	}
 
 	public static void test21() {
