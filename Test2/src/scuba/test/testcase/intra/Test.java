@@ -166,6 +166,11 @@ public class Test {
 		AliasHelper.notAlias(t3, t1);
 		AliasHelper.alias(t3, t1.j);
 		AliasHelper.notAlias(t3, t1.j.j);
+		// do transitive closure
+		D t4 = test8Helper3(t1);
+		AliasHelper.notAlias(t4, t1);
+		AliasHelper.alias(t4, t1.j);
+		AliasHelper.alias(t4, t1.j.j);
 	}
 
 	public static D test8Helper1(D a1) {
@@ -174,6 +179,15 @@ public class Test {
 
 	public static D test8Helper2(D a1) {
 		return a1.j;
+	}
+
+	public static D test8Helper3(D a1) {
+		int i = 0;
+		if (i < 10) {
+			return a1.j;
+		} else {
+			return a1.j.j;
+		}
 	}
 
 	// test regular recursive field
@@ -210,6 +224,12 @@ public class Test {
 		AliasHelper.alias(t2, t1.j);
 		AliasHelper.alias(t2, t1.j.j);
 		AliasHelper.alias(t2, t1.j.j.j);
+
+		D t3 = test10Helper2(t1);
+		AliasHelper.notAlias(t3, t1);
+		AliasHelper.alias(t3, t1.j);
+		AliasHelper.alias(t3, t1.j.j);
+		AliasHelper.alias(t3, t1.j.j.j);
 	}
 
 	public static D test10Helper1(D a1) {
@@ -218,6 +238,19 @@ public class Test {
 		while (true) {
 			if (i >= 3) {
 				return t1;
+			} else {
+				t1 = t1.j;
+				i++;
+			}
+		}
+	}
+
+	public static D test10Helper2(D a1) {
+		D t1 = a1;
+		int i = 0;
+		while (true) {
+			if (i >= 3) {
+				return t1.j;
 			} else {
 				t1 = t1.j;
 				i++;
@@ -559,8 +592,9 @@ public class Test {
 		return a1.l.k.l.k.h.k;
 	}
 
+	// test array index field
 	public static void test15() {
-
+		
 	}
 
 	public static void test16() {
