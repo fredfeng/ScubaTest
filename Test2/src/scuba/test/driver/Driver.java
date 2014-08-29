@@ -13,6 +13,8 @@ public class Driver {
 		scuba.test.testcase.designpattern.Test.test();
 		// test intra-proc
 		scuba.test.testcase.intra.Test.test();
+		// test inter-proc
+		scuba.test.testcase.inter.Test.test();
 	}
 
 }
