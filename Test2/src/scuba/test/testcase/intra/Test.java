@@ -863,18 +863,46 @@ public class Test {
 		return a1.f[0].h[0].f[0];
 	}
 
+	// test CHECKCAST
 	public static void test21() {
-
+		J0 t1 = new J1();
+		J1 t2 = (J1) t1;
+		t2.f = new A();
+		A t3 = t2.f;
+		AliasHelper.alias(t2.f, t3);
+		AliasHelper.alias(t1, t2);
 	}
 
+	// test CHECKCAST
 	public static void test22() {
+		J0 t1 = new J1();
+		t1.f = new A();
+		J1 t2 = (J1) t1;
+		t2.f = new A();
+		AliasHelper.notAlias(t1.f, t2.f);
+		AliasHelper.alias(t1, t2);
 
+		t1.f = t2.f;
+		AliasHelper.alias(t1.f, t2.f);
 	}
 
+	// test CHECKCAST (array copy)
 	public static void test23() {
-
+		Object[] t1 = new Object[1];
+		t1[0] = new Object();
+		Object[] t2 = new Object[1];
+		test23Helper1(t1, t2);
+		AliasHelper.notAlias(t1, t2);
+		AliasHelper.alias(t1[0], t2[0]);
 	}
 
+	public static void test23Helper1(Object a1, Object a2) {
+		Object[] t1 = (Object[]) a1;
+		Object[] t2 = (Object[]) a2;
+		t2[0] = t1[0];
+	}
+
+	
 	public static void test24() {
 
 	}
