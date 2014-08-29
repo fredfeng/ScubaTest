@@ -13,12 +13,11 @@ public class Test {
 		test2();
 		test3();
 		test4();
-		test5();
 	}
 
 	public static void test1() {
-		//original test cases from Isil. 
-		//basic functionalities for constraint.
+		// original test cases from Isil.
+		// basic functionalities for constraint.
 		Object o1 = new Object(); // o1
 		Object o2 = new Object(); // o2
 		SubCst1 sub1 = new SubCst1(o1, o2); // s1
@@ -54,15 +53,19 @@ public class Test {
 		B b = new B(o1, o2, o3);
 		C c = new C(o1, o2, o3);
 
-		Object o4 = test11(a);
-		Object o5 = test11(b);
-		Object o6 = test11(c);
+		Object o4 = test2Helper1(a);
+		Object o5 = test2Helper1(b);
+		Object o6 = test2Helper1(c);
 
 		AliasHelper.notAlias(o4, o5); // false
 		AliasHelper.notAlias(o4, o6); // false
 		AliasHelper.notAlias(o5, o6); // false
 	}
-	
+
+	public static Object test2Helper1(A a) {
+		return a.foo();
+	}
+
 	public static void test3() {
 		Object o1 = new Object();
 		Object o2 = new Object();
@@ -80,7 +83,7 @@ public class Test {
 		Object w = a.id(y); // w -> o2
 		AliasHelper.notAlias(z, w); // false
 	}
-	
+
 	public static void test4() {
 		Object o1 = new Object();
 		Object o2 = new Object();
@@ -96,9 +99,9 @@ public class Test {
 		AliasHelper.notAlias(a2.j, a);
 		AliasHelper.alias(a.j, a);
 	}
-	
+
+	// test whether we can generate the correct interval constraints.
 	public static void test5() {
-		//test whether we can generate the correct interval constraints.
 		Object o7 = new Object();
 		Object o8 = new Object();
 		Object o9 = new Object();
@@ -107,7 +110,7 @@ public class Test {
 		H1 h3 = new H3(o7, o8, o9);
 		H1 h4 = new H4(o7, o8, o9);
 		Object o10 = h2.foo();
-		//now g and h are alias.
+		// now g and h are alias.
 		AliasHelper.alias(o10, o7);
 		AliasHelper.alias(o10, o8);
 		AliasHelper.notAlias(o10, o9);
@@ -127,7 +130,4 @@ public class Test {
 		AliasHelper.alias(o10, o12);
 	}
 
-	public static Object test11(A a) {
-		return a.foo();
-	}
 }

@@ -1,4 +1,4 @@
-package edu.utexas.test;
+package src.edu.utexas.test;
 
 public abstract class A {
 
