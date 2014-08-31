@@ -134,6 +134,21 @@ public class Test {
 	
 	public static void test6() {
 		//test resolving static field in clinit.
+		Object o7 = new Object();
+		Object o8 = new Object();
+		Object o9 = new Object();
+		H1 h1 = new H1(o7, o8, o9);
+		H1 h2 = new H2(o7, o8, o9);
+		Object o1 = h1.retG();
+		Object o2 = ((H2)h2).retG1();
+		//although in different context but should point to the same static field.
+		AliasHelper.alias(o1, o2);
+		AliasHelper.notAlias(o1, o7);
+		AliasHelper.notAlias(o1, o8);
+		AliasHelper.notAlias(o1, o9);
+		AliasHelper.notAlias(o2, o7);
+		AliasHelper.notAlias(o2, o8);
+		AliasHelper.notAlias(o2, o9);
 	}
 
 }

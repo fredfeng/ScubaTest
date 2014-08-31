@@ -1,6 +1,8 @@
 package scuba.test.testcase.virtualcall.inherit;
 
 public class H1 implements I1 {
+	
+	public static final Object sf = new Object();
 
 	public Object f, g, h;
 
@@ -21,5 +23,9 @@ public class H1 implements I1 {
 
 	public void but() {
 		f = g;
+	}
+	
+	public Object retG() {
+		return sf;
 	}
 }

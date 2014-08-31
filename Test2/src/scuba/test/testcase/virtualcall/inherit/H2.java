@@ -14,5 +14,13 @@ public class H2 extends H1 {
 	public void but() {
 		g = h;
 	}
+	
+	public Object retG1() {
+		return retG2();
+	}
+	
+	public Object retG2() {
+		return sf;
+	}
 
 }
