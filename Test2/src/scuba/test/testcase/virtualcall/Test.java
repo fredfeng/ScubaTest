@@ -13,7 +13,7 @@ public class Test {
 		test2();
 		test3();
 		test4();
-		//test5();
+		test5();
 		test6();
 	}
 
@@ -113,22 +113,22 @@ public class Test {
 		H1 h4 = new H4(o7, o8, o9);
 		Object o10 = h2.foo();
 		// now g and h are alias.
-		AliasHelper.alias(o10, o7);
+		AliasHelper.notAlias(o10, o7);
 		AliasHelper.alias(o10, o8);
-		AliasHelper.notAlias(o10, o9);
+		AliasHelper.alias(o10, o9);
 
 		Object o11 = h3.foo();
 		AliasHelper.alias(h3.f, h3.h);
 		AliasHelper.notAlias(h3.f, h3.g);
 
 		Object o12 = h4.foo();
-		AliasHelper.alias(h3.g, h3.h);
-		AliasHelper.notAlias(h3.f, h3.h);
+		AliasHelper.alias(h4.g, h4.h);
+		AliasHelper.notAlias(h4.f, h4.h);
 
 		Object o13 = h1.foo();
-		AliasHelper.notAlias(o10, o11);
-		AliasHelper.notAlias(o11, o12);
-		AliasHelper.notAlias(o10, o13);
+		AliasHelper.alias(o10, o11);
+		AliasHelper.alias(o11, o12);
+		AliasHelper.alias(o10, o13);
 		AliasHelper.alias(o10, o12);
 	}
 	
