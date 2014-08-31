@@ -13,6 +13,8 @@ public class Test {
 		test2();
 		test3();
 		test4();
+		//test5();
+		test6();
 	}
 
 	public static void test1() {
@@ -128,6 +130,10 @@ public class Test {
 		AliasHelper.notAlias(o11, o12);
 		AliasHelper.notAlias(o10, o13);
 		AliasHelper.alias(o10, o12);
+	}
+	
+	public static void test6() {
+		//test resolving static field in clinit.
 	}
 
 }
