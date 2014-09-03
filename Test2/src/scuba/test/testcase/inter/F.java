@@ -2,7 +2,7 @@ package scuba.test.testcase.inter;
 
 public class F {
 
-	public B alloc() {
+	public B allocate() {
 		return new B();
 	}
 

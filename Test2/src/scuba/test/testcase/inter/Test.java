@@ -127,13 +127,13 @@ public class Test {
 	// test context for allocations
 	public static void test11() {
 		F t1 = new F();
-		B t2 = t1.alloc();
-		B t3 = t1.alloc();
+		B t2 = t1.allocate();
+		B t3 = t1.allocate();
 		AliasHelper.notAlias(t2, t3);
 	}
 
 	public static void test12() {
-
+		
 	}
 
 	public static void test13() {
