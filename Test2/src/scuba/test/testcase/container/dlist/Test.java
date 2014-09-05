@@ -29,7 +29,15 @@ public class Test {
         list.add(l3);
         
         ListIterator<ListItem> iterator = list.iterator();
-
+        test1(iterator, o1, l1, l2, l4);
+        test2(iterator, l2, l3, l4);
+        test3(iterator, l2, l3, l4);
+        test4(iterator, l2, l3, l4);
+        test5(iterator, l4);
+	}
+	
+	private static void test1(ListIterator<ListItem> iterator, Object o1,
+			ListItem l1, ListItem l2, ListItem l4) {
         // go forwards with next() and set()
         while (iterator.hasNext()) {
             ListItem x = iterator.next();
@@ -40,6 +48,10 @@ public class Test {
             iterator.set(x);
         }
 
+	}
+	
+	private static void test2(ListIterator<ListItem> iterator, ListItem l2,
+			ListItem l3, ListItem l4) {
         // go backwards with previous() and set()
         while (iterator.hasPrevious()) {
         	ListItem x = iterator.previous();
@@ -47,7 +59,10 @@ public class Test {
         	AliasHelper.alias(x, l3);
         	AliasHelper.notAlias(x, l4);
         }
-
+	}
+	
+	private static void test3(ListIterator<ListItem> iterator, ListItem l2,
+			ListItem l3, ListItem l4) {
         // remove all elements that are multiples of 4 via next() and remove()
         while (iterator.hasNext()) {
             ListItem x = iterator.next();
@@ -56,7 +71,10 @@ public class Test {
         	AliasHelper.alias(x, l3);
         	AliasHelper.notAlias(x, l4);
         }
+	}
 
+	private static void test4(ListIterator<ListItem> iterator, ListItem l2,
+			ListItem l3, ListItem l4) {
         // remove all even elements via previous() and remove()
         while (iterator.hasPrevious()) {
         	ListItem x = iterator.previous();
@@ -65,7 +83,9 @@ public class Test {
         	AliasHelper.alias(x, l3);
         	AliasHelper.notAlias(x, l4);
         }
-
+	}
+	
+	private static void test5(ListIterator<ListItem> iterator, ListItem l4) {
         // add elements via previous() and add()
 		ListItem x = iterator.previous();
     	AliasHelper.notAlias(x.f, l4.f);
