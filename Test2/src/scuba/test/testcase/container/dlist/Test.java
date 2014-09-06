@@ -33,7 +33,18 @@ public class Test {
         test2(iterator, l2, l3, l4);
         test3(iterator, l2, l3, l4);
         test4(iterator, l2, l3, l4);
-        test5(iterator, l4);
+//        test5(iterator, l4);
+        
+		ListItem x = iterator.previous();
+    	AliasHelper.notAlias(x.f, l4.f);
+		//eventually we add l4.
+		iterator.add(l4);
+		//now everything becomes alias.
+		ListItem y = iterator.previous();
+    	AliasHelper.alias(y, l4);
+    	AliasHelper.alias(y.f, l4.f);
+    	AliasHelper.notAlias(x.f, l4.f);
+        
 	}
 	
 	private static void test1(ListIterator<ListItem> iterator, Object o1,
