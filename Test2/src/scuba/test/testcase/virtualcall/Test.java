@@ -114,6 +114,7 @@ public class Test {
 		Object o10 = h2.foo();
 		// now g and h are alias.
 		AliasHelper.notAlias(o10, o7);
+		//fails.
 		AliasHelper.alias(o10, o8);
 		AliasHelper.alias(o10, o9);
 
@@ -128,6 +129,7 @@ public class Test {
 		Object o13 = h1.foo();
 		AliasHelper.alias(o10, o11);
 		AliasHelper.alias(o11, o12);
+		//fails.
 		AliasHelper.alias(o10, o13);
 		AliasHelper.alias(o10, o12);
 	}

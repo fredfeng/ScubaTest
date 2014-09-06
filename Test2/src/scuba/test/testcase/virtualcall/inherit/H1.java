@@ -6,6 +6,10 @@ public class H1 implements I1 {
 
 	public Object f, g, h;
 
+	public H1() {
+		
+	}
+	
 	public H1(Object o1, Object o2, Object o3) {
 		f = o1;
 		g = o2;

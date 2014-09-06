@@ -11,6 +11,8 @@ public class Driver {
 		scuba.test.testcase.container.Test.testContainer();
 		// testing design patterns
 		scuba.test.testcase.designpattern.Test.test();
+		// tricky test cases.
+		scuba.test.testcase.tricky.Test.test();
 		// test intra-proc
 		scuba.test.testcase.intra.Test.test();
 		// test inter-proc
