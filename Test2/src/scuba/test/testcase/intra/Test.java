@@ -902,7 +902,6 @@ public class Test {
 		t2[0] = t1[0];
 	}
 
-	
 	public static void test24() {
 
 	}
