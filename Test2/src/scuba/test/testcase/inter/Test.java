@@ -133,7 +133,7 @@ public class Test {
 	}
 
 	public static void test12() {
-		
+
 	}
 
 	public static void test13() {
