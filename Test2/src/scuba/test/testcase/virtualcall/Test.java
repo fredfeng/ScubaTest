@@ -31,9 +31,13 @@ public class Test {
 		Cst1 cst3 = new Cst1(sub2, sub1);
 		Cst1 cst4 = new Cst2(sub2, sub1);
 
+		// o3 = cst1.g.m
 		Object o3 = cst1.gut();
+		// o4 = cst2.h.m
 		Object o4 = cst2.gut();
+		// o5 = cst3.g.l
 		Object o5 = cst3.gut();
+		// o6 = cst4.h.m
 		Object o6 = cst4.gut();
 		AliasHelper.alias(o1, o4);
 		AliasHelper.alias(o1, o5);
@@ -114,7 +118,7 @@ public class Test {
 		Object o10 = h2.foo();
 		// now g and h are alias.
 		AliasHelper.notAlias(o10, o7);
-		//fails.
+		// fails.
 		AliasHelper.alias(o10, o8);
 		AliasHelper.alias(o10, o9);
 
@@ -129,21 +133,22 @@ public class Test {
 		Object o13 = h1.foo();
 		AliasHelper.alias(o10, o11);
 		AliasHelper.alias(o11, o12);
-		//fails.
+		// fails.
 		AliasHelper.alias(o10, o13);
 		AliasHelper.alias(o10, o12);
 	}
-	
+
 	public static void test6() {
-		//test resolving static field in clinit.
+		// test resolving static field in clinit.
 		Object o7 = new Object();
 		Object o8 = new Object();
 		Object o9 = new Object();
 		H1 h1 = new H1(o7, o8, o9);
 		H1 h2 = new H2(o7, o8, o9);
 		Object o1 = h1.retG();
-		Object o2 = ((H2)h2).retG1();
-		//although in different context but should point to the same static field.
+		Object o2 = ((H2) h2).retG1();
+		// although in different context but should point to the same static
+		// field.
 		AliasHelper.alias(o1, o2);
 		AliasHelper.notAlias(o1, o7);
 		AliasHelper.notAlias(o1, o8);
