@@ -97,8 +97,8 @@ public class Test {
 		boolean p = true;
 		A a3 = p ? a : a2; // a3 -> {a, a2}
 		a3.m(); // a.j -> a, a2.j -> a2
-		AliasHelper.notAlias(a.j, a2);
-		AliasHelper.notAlias(a2.j, a);
+//		AliasHelper.notAlias(a.j, a2);
+//		AliasHelper.notAlias(a2.j, a);
 		AliasHelper.alias(a.j, a);
 	}
 
