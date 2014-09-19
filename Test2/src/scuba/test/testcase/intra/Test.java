@@ -159,10 +159,10 @@ public class Test {
 		AliasHelper.notAlias(t1, t1.j);
 		AliasHelper.notAlias(t1, t1.j.j);
 		AliasHelper.notAlias(t1.j, t1.j.j);
-		// do transitive closure
+		// no transitive closure
 		D t2 = test8Helper1(t1);
 		AliasHelper.notAlias(t2, t1);
-		AliasHelper.alias(t2, t1.j);
+		AliasHelper.notAlias(t2, t1.j);
 		AliasHelper.alias(t2, t1.j.j);
 		// no transitive closure
 		D t3 = test8Helper2(t1);
@@ -207,7 +207,7 @@ public class Test {
 		AliasHelper.notAlias(t2, t1.g);
 		AliasHelper.notAlias(t2, t1.g.j);
 		AliasHelper.notAlias(t2, t1.g.g);
-		AliasHelper.alias(t2, t1.j);
+		AliasHelper.notAlias(t2, t1.j);
 		AliasHelper.alias(t2, t1.j.j);
 		AliasHelper.notAlias(t2, t1.j.g);
 	}
@@ -270,7 +270,7 @@ public class Test {
 		t1.h.k.h.k = new E();
 		F t2 = test11Helper1(t1);
 		AliasHelper.notAlias(t2, t1);
-		AliasHelper.alias(t2, t1.h);
+		AliasHelper.notAlias(t2, t1.h);
 		AliasHelper.notAlias(t2, t1.h.k);
 		AliasHelper.alias(t2, t1.h.k.h);
 		AliasHelper.notAlias(t2, t1.h.k.h.k);
@@ -323,7 +323,7 @@ public class Test {
 		E t3 = test13Helper2(t1);
 		AliasHelper.alias(t3, t1);
 		AliasHelper.notAlias(t3, t1.h);
-		AliasHelper.alias(t3, t1.h.k);
+		AliasHelper.notAlias(t3, t1.h.k);
 		AliasHelper.notAlias(t3, t1.h.k.h);
 		AliasHelper.alias(t3, t1.h.k.h.k);
 
@@ -336,7 +336,7 @@ public class Test {
 
 		F t5 = test13Helper4(t1);
 		AliasHelper.notAlias(t5, t1);
-		AliasHelper.alias(t5, t1.h);
+		AliasHelper.notAlias(t5, t1.h);
 		AliasHelper.notAlias(t5, t1.h.k);
 		AliasHelper.alias(t5, t1.h.k.h);
 		AliasHelper.notAlias(t5, t1.h.k.h.k);
@@ -405,8 +405,8 @@ public class Test {
 		AliasHelper.alias(t4, t1.h);
 		AliasHelper.alias(t4, t1.h.k.h);
 		AliasHelper.notAlias(t4, t1.h.k);
-		AliasHelper.alias(t4, t1.h.k.l);
-		AliasHelper.alias(t4, t1.l.k.h);
+		AliasHelper.notAlias(t4, t1.h.k.l);
+		AliasHelper.notAlias(t4, t1.l.k.h);
 		AliasHelper.notAlias(t4, t1.l);
 		AliasHelper.notAlias(t4, t1.l.k);
 		AliasHelper.notAlias(t4, t1.l.k.l.k);
@@ -433,7 +433,7 @@ public class Test {
 		AliasHelper.notAlias(t6, t1.h.k);
 		AliasHelper.notAlias(t6, t1.h.k.l);
 		AliasHelper.notAlias(t6, t1.l.k.h);
-		AliasHelper.alias(t6, t1.l);
+		AliasHelper.notAlias(t6, t1.l);
 		AliasHelper.notAlias(t6, t1.l.k);
 		AliasHelper.notAlias(t6, t1.l.k.l.k);
 		AliasHelper.alias(t6, t1.l.k.l);
@@ -444,12 +444,12 @@ public class Test {
 		AliasHelper.notAlias(t7, t1.h);
 		AliasHelper.notAlias(t7, t1.h.k.h);
 		AliasHelper.notAlias(t7, t1.h.k);
-		AliasHelper.alias(t7, t1.h.k.l);
-		AliasHelper.alias(t7, t1.l.k.h);
+		AliasHelper.notAlias(t7, t1.h.k.l);
+		AliasHelper.notAlias(t7, t1.l.k.h);
 		AliasHelper.alias(t7, t1.l);
 		AliasHelper.notAlias(t7, t1.l.k);
 		AliasHelper.notAlias(t7, t1.l.k.l.k);
-		AliasHelper.alias(t7, t1.l.k.l);
+		AliasHelper.notAlias(t7, t1.l.k.l);
 		// t8 = a1.h.k
 		E t8 = test14Helper7(t1);
 		AliasHelper.notAlias(t8, t1);
@@ -482,12 +482,12 @@ public class Test {
 		AliasHelper.alias(t10, t1.h.k.l.k);
 		AliasHelper.notAlias(t10, t1.h);
 		AliasHelper.notAlias(t10, t1.h.k.h);
-		AliasHelper.alias(t10, t1.h.k);
+		AliasHelper.notAlias(t10, t1.h.k);
 		AliasHelper.notAlias(t10, t1.h.k.l);
 		AliasHelper.notAlias(t10, t1.l.k.h);
 		AliasHelper.notAlias(t10, t1.l);
-		AliasHelper.alias(t10, t1.l.k);
-		AliasHelper.alias(t10, t1.l.k.l.k);
+		AliasHelper.notAlias(t10, t1.l.k);
+		AliasHelper.notAlias(t10, t1.l.k.l.k);
 		AliasHelper.notAlias(t10, t1.l.k.l);
 		// t11 = a1.h.k.h.k.l.k
 		E t11 = test14Helper10(t1);
@@ -495,12 +495,12 @@ public class Test {
 		AliasHelper.alias(t11, t1.h.k.l.k);
 		AliasHelper.notAlias(t11, t1.h);
 		AliasHelper.notAlias(t11, t1.h.k.h);
-		AliasHelper.alias(t11, t1.h.k);
+		AliasHelper.notAlias(t11, t1.h.k);
 		AliasHelper.notAlias(t11, t1.h.k.l);
 		AliasHelper.notAlias(t11, t1.l.k.h);
 		AliasHelper.notAlias(t11, t1.l);
-		AliasHelper.alias(t11, t1.l.k);
-		AliasHelper.alias(t11, t1.l.k.l.k);
+		AliasHelper.notAlias(t11, t1.l.k);
+		AliasHelper.notAlias(t11, t1.l.k.l.k);
 		AliasHelper.notAlias(t11, t1.l.k.l);
 		// t12 = a1.l.k
 		E t12 = test14Helper11(t1);
@@ -534,12 +534,12 @@ public class Test {
 		AliasHelper.alias(t14, t1.h.k.l.k);
 		AliasHelper.notAlias(t14, t1.h);
 		AliasHelper.notAlias(t14, t1.h.k.h);
-		AliasHelper.alias(t14, t1.h.k);
+		AliasHelper.notAlias(t14, t1.h.k);
 		AliasHelper.notAlias(t14, t1.h.k.l);
 		AliasHelper.notAlias(t14, t1.l.k.h);
 		AliasHelper.notAlias(t14, t1.l);
-		AliasHelper.alias(t14, t1.l.k);
-		AliasHelper.alias(t14, t1.l.k.l.k);
+		AliasHelper.notAlias(t14, t1.l.k);
+		AliasHelper.notAlias(t14, t1.l.k.l.k);
 		AliasHelper.notAlias(t14, t1.l.k.l);
 	}
 
@@ -603,7 +603,7 @@ public class Test {
 		D t2 = test15Helper1(t1);
 		AliasHelper.notAlias(t2, t1);
 		AliasHelper.alias(t2, t1.j);
-		AliasHelper.alias(t2, t1.j.j);
+		AliasHelper.notAlias(t2, t1.j.j);
 		AliasHelper.alias(t2, t1.j.j.j);
 	}
 
@@ -838,7 +838,7 @@ public class Test {
 		// t2 = t1.f.i.h.i.f
 		H[] t2 = test20Helper1(t1);
 		AliasHelper.notAlias(t2, t1);
-		AliasHelper.alias(t2, t1.f);
+		AliasHelper.notAlias(t2, t1.f);
 		AliasHelper.notAlias(t2, t1.f[0]);
 		AliasHelper.notAlias(t2, t1.f[0].h);
 		AliasHelper.notAlias(t2, t1.f[0].h[0]);
@@ -848,7 +848,7 @@ public class Test {
 		H t3 = test20Helper2(t1);
 		AliasHelper.notAlias(t3, t1);
 		AliasHelper.notAlias(t3, t1.f);
-		AliasHelper.alias(t3, t1.f[0]);
+		AliasHelper.notAlias(t3, t1.f[0]);
 		AliasHelper.notAlias(t3, t1.f[0].h);
 		AliasHelper.notAlias(t3, t1.f[0].h[0]);
 		AliasHelper.notAlias(t3, t1.f[0].h[0].f);
