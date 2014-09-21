@@ -4,10 +4,6 @@ public class C {
 
 	protected D f;
 
-	public static void main(String[] args) {
-		new C();
-	}
-
 	public C() {
 		this.f = new D();
 		foo();
