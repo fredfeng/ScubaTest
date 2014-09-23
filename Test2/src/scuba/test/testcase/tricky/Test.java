@@ -8,6 +8,7 @@ public class Test {
 	public static void test() {
 		test1();
 		test2();
+		test3();
 	}
 	
 	private static void test1() {
@@ -24,6 +25,14 @@ public class Test {
 	private static void test2() {
 		//example in the paper.
 		
+	}
+	
+	private static void test3() {
+		//show the semantic of copy by value.
+		Foo foo = new Foo();
+		Bar bar = new Bar();//o1
+		foo.setX(bar);
+		//p2set of bar should only contain o1;
 	}
 	
 	private static Object foo(H1 x, H1 y) {
