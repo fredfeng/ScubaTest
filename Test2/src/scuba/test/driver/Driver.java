@@ -21,6 +21,7 @@ public class Driver {
 		// run this test case when you are ready for it.
 		scuba.test.testcase.recursion.Test.test();
 		scuba.test.testcase.ctxt.Test.test();
+		scuba.test.testcase.semantics.Test.test();
 	}
 
 }
