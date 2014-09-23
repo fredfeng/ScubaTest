@@ -20,6 +20,8 @@ public class Driver {
 		// not terminate within 10 min if you set alloc length > 1.
 		// run this test case when you are ready for it.
 		scuba.test.testcase.recursion.Test.test();
+		// examples from isil.
+		scuba.test.testcase.tricky.Test.test();
 		scuba.test.testcase.ctxt.Test.test();
 	}
 
