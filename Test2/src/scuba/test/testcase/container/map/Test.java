@@ -8,15 +8,15 @@ public class Test {
 	public static void run() {
 		ListItem l1 = new ListItem();
 		ListItem l2 = new ListItem();
-		
+
 		Object o1 = new Object();
 		Object o2 = new Object();
-		
+
 		Object k1 = new Object();
 		Object k2 = new Object();
 		l1.f = o1;
 		l2.f = o2;
-		
+
 		TMHashMap<Object, ListItem> tmhm = new TMHashMap<Object, ListItem>();
 		tmhm.put(k1, l1);
 		ListItem v1 = tmhm.get(k1).getValue();
