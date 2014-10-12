@@ -29,7 +29,7 @@ public class Test {
 		//stack
 		scuba.test.testcase.container.stack.Test.run();
 		//set
-//		scuba.test.testcase.container.set.Test.run();
+		scuba.test.testcase.container.set.Test.run();
 	}
 
 }
