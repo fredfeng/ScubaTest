@@ -1,6 +1,12 @@
 package scuba.test.testcase.container.dlist;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.ListIterator;
+import java.util.Stack;
+import java.util.Vector;
 
 import framework.scuba.helper.AliasHelper;
 
@@ -46,6 +52,10 @@ public class Test {
 		AliasHelper.notAlias(x.f, l4.f);
 
 		test6();
+		test7();
+		test8();
+		test9();
+		test10();
 	}
 
 	private static void test1(ListIterator<ListItem> iterator, Object o1,
@@ -123,5 +133,116 @@ public class Test {
 		// Object t2 = l2.f;
 		// Object t3 = l3.f;
 	}
+	
+	// java.util.ArrayList
+	public static void test7() {
+		List<Object> list = new ArrayList<Object>();
+		Object o1 = new Object();
+		Object o2 = new Object();
+		list.add(o1);
+		list.add(o2);
+		
+		List<Object> list2 = new ArrayList<Object>();
+		Object o3 = new Object();
+		list2.add(o3);
+		
+		Object o4 = list.get(0);
+		Object o5 = list2.get(0);
+		
+		AliasHelper.notAlias(o4, o5);
+		AliasHelper.alias(o4, o1);
+		AliasHelper.alias(o4, o2);
+		AliasHelper.alias(o5, o3);
+	}
 
+	// java.util.LinkedList
+	public static void test8() {
+		List<Object> list = new LinkedList<Object>();
+		Object o1 = new Object();
+		Object o2 = new Object();
+		list.add(o1);
+		list.add(o2);
+		
+		List<Object> list2 = new LinkedList<Object>();
+		Object o3 = new Object();
+		list2.add(o3);
+		
+		Object o4 = list.get(0);
+		Object o5 = list2.get(0);
+		
+		AliasHelper.notAlias(o4, o5);
+		AliasHelper.alias(o4, o1);
+		AliasHelper.alias(o4, o2);
+		AliasHelper.alias(o5, o3);
+	}
+	
+	// java.util.Vector
+	public static void test9() {
+		List<Object> list = new Vector<Object>();
+		Object o1 = new Object();
+		Object o2 = new Object();
+		list.add(o1);
+		list.add(o2);
+		
+		List<Object> list2 = new Vector<Object>();
+		Object o3 = new Object();
+		list2.add(o3);
+		
+		Object o4 = list.get(0);
+		Object o5 = list2.get(0);
+		
+		AliasHelper.notAlias(o4, o5);
+		AliasHelper.alias(o4, o1);
+		AliasHelper.alias(o4, o2);
+		AliasHelper.alias(o5, o3);
+	}
+	
+	// java.util.Stack
+	public static void test10() {
+		List<Object> list = new Stack<Object>();
+		Object o1 = new Object();
+		Object o2 = new Object();
+		list.add(o1);
+		list.add(o2);
+		
+		List<Object> list2 = new Stack<Object>();
+		Object o3 = new Object();
+		list2.add(o3);
+		Object o4 = list.get(0);
+		Object o5 = list2.get(0);
+		
+		AliasHelper.notAlias(o4, o5);
+		AliasHelper.alias(o4, o1);
+		AliasHelper.alias(o4, o2);
+		AliasHelper.alias(o5, o3);
+	}
+	
+	// java.util.LinkedList
+	public static void test11() {
+		List<Object> list = new LinkedList<Object>();
+		Object o1 = new Object();
+		Object o2 = new Object();
+		list.add(o1);
+		list.add(o2);
+		
+		List<Object> list2 = new LinkedList<Object>();
+		Object o3 = new Object();
+		list2.add(o3);
+		
+		Iterator<Object> it = list.iterator();
+		Iterator<Object> it2 = list2.iterator();
+		
+		Object o4 = it.next();
+		Object o5 = it2.next();
+		
+		AliasHelper.notAlias(it, it2);
+		AliasHelper.notAlias(o4, o5);
+		
+		AliasHelper.alias(o4, o1);
+		AliasHelper.alias(o4, o2);
+		AliasHelper.alias(o3, o5);
+		
+		AliasHelper.notAlias(o1, o5);
+		AliasHelper.notAlias(o2, o5);
+	}
 }
